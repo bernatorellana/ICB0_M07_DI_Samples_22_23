@@ -8,8 +8,9 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
+    <Grid Background="OrangeRed">
         <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
             <RowDefinition Height="40"/>
             <RowDefinition Height="40"/>
             <RowDefinition Height="40"/>
@@ -19,15 +20,18 @@
             <ColumnDefinition Width="1*"></ColumnDefinition>
             <ColumnDefinition Width="2*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <TextBox Grid.Row="0" Grid.Column="0" Text="Hola"></TextBox>
-        <TextBox Grid.Row="1" Grid.Column="0" Text="Hola"></TextBox>
-        <TextBox Grid.Row="2" Grid.Column="0" Text="Hola"></TextBox>
-        <Button  Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch">OK</Button>
-        <Button  Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch">OK</Button>
-        <Button  Grid.Row="2" Grid.Column="1" HorizontalAlignment="Stretch">OK</Button>
-        <TextBlock Grid.Row="0" Grid.Column="2" Text="Hola"></TextBlock>
-        <TextBlock Grid.Row="1" Grid.Column="2" Text="Hola"></TextBlock>
-        <TextBlock Grid.Row="2" Grid.Column="2" Text="Hola"></TextBlock>
+        <TextBox x:Name="txbUnitats"   Grid.Row="0" Grid.Column="0" Text="Hola"></TextBox>
+        <TextBox x:Name="txbUnitats2" Grid.Row="1" Grid.Column="0" Text="Hola"></TextBox>
+        <TextBox x:Name="txbPreu"     Grid.Row="2" Grid.Column="0" Text="Hola"></TextBox>
+        <TextBox x:Name="txbData"  PlaceholderText="data en format dd/mm/yyyy"   Grid.Row="3" Grid.Column="0" ></TextBox>
+        <Button Click="ButtonUnitats_Click" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch">OK</Button>
+        <Button Click="ButtonUnitats2_Click" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch">OK</Button>
+        <Button Click="Button_Click" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Stretch">OK</Button>
+        <Button x:Name="btnData" Click="btnData_Click" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Stretch">OK</Button>
+        <TextBlock x:Name="txtUnitats" Grid.Row="0" Grid.Column="2" Text="Hola"></TextBlock>
+        <TextBlock x:Name="txtUnitats2" Grid.Row="1" Grid.Column="2" Text="Hola"></TextBlock>
+        <TextBlock x:Name="txtPreu"    Grid.Row="2" Grid.Column="2" Text="Hola"></TextBlock>
+        <TextBlock x:Name="txtData"    Grid.Row="3" Grid.Column="2" Text="Hola"></TextBlock>
 
     </Grid>
 </Page>
