@@ -28,12 +28,16 @@ namespace AppCalculadora
 
             // Creació de botons
             //<Button Grid.Column="0" Grid.Row="0" Content="1"></Button>
-            Button b = new Button();
-            b.Content = "1";
-            Grid.SetColumn(b, 0);
-            Grid.SetRow(b, 0);
+            for (int i = 1; i < 10; i++)
+            {
+                Button b = new Button();
+                b.Content = i+"";
+                Grid.SetColumn(b, (i-1)%3);
+                Grid.SetRow(b, (i-1)/3+1);
+                grdTeclat.Children.Add(b);
+            }
  
-            grdTeclat.Children.Add(b);
+            
         }
     }
 }

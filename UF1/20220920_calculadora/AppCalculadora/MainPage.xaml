@@ -1,4 +1,5 @@
 ﻿<Page
+
     x:Class="AppCalculadora.MainPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -7,7 +8,17 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
+    <Page.Resources>
+        <Style TargetType="Button">
+            <Setter Property="HorizontalAlignment" Value="Stretch"></Setter>
+            <Setter Property="VerticalAlignment" Value="Stretch"></Setter>
+            <Setter Property="Margin" Value="5"></Setter>
+            <Setter Property="FontSize" Value="40"></Setter>
+            <Setter Property="BorderThickness" Value="5" />
+            <Setter Property="Foreground" Value="Black" />
+            <Setter Property="Background" Value="Coral"></Setter>
+        </Style>
+    </Page.Resources>
     <StackPanel Orientation="Vertical">
         <TextBox Background="Black" Text="0" Foreground="Lime" FontSize="60"></TextBox>
         <Grid x:Name="grdTeclat">
@@ -22,7 +33,15 @@
                 <RowDefinition Height="*"></RowDefinition>
                 <RowDefinition Height="*"></RowDefinition>
                 <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
             </Grid.RowDefinitions>
+            <Button Content="C" Grid.Row="0" Grid.Column="0" ></Button>
+            <Button Content="/" Grid.Row="0" Grid.Column="3"></Button>
+            <Button Content="*" Grid.Row="1" Grid.Column="3"></Button>
+            <Button Content="-" Grid.Row="2" Grid.Column="3"></Button>
+            <Button Content="+" Grid.Row="3" Grid.Column="3"></Button>
+            <Button Content="0" Grid.Row="4" Grid.Column="1"></Button>
+
         </Grid>
     </StackPanel>
 </Page>
