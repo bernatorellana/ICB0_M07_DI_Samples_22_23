@@ -22,8 +22,14 @@ namespace AppCalculadora
     /// </summary>
     public sealed partial class MainPage : Page
     {
+ 
+        decimal acumulador=0;
+        char? operacioPendent=null;
+        bool pendentEsborrar = false;
+
         public MainPage()
         {
+
             this.InitializeComponent();
 
             // Creació de botons
@@ -33,11 +39,78 @@ namespace AppCalculadora
                 Button b = new Button();
                 b.Content = i+"";
                 Grid.SetColumn(b, (i-1)%3);
-                Grid.SetRow(b, (i-1)/3+1);
+                Grid.SetRow(b, 3-(i-1)/3);
+                
+                // associem l'esdeveniment Click al nou botó
+                b.Click += Numero_Click;
+
                 grdTeclat.Children.Add(b);
             }
  
             
+        }
+
+        private void Numero_Click(object sender, RoutedEventArgs e)
+        {            
+            Button elNumeroQueHanClicat = (Button)sender;
+            if (pendentEsborrar)
+            {                
+                txbPantalla.Text = "";
+                pendentEsborrar = false;
+            }
+
+            if (txbPantalla.Text.Equals("0"))
+            {
+                txbPantalla.Text = elNumeroQueHanClicat.Content + "";
+            }
+            else
+            {
+                txbPantalla.Text += elNumeroQueHanClicat.Content + "";
+            }
+            
+
+        }
+
+        private void Clear_Click(object sender, RoutedEventArgs e)
+        {
+            Clear();
+        }
+
+        private void Clear()
+        {
+            txbPantalla.Text = "0";
+        }
+
+        private void Operacio_Click(object sender, RoutedEventArgs e)
+        {
+            Button operacioQueHanClicat = (Button)sender;
+            char operacioChar = operacioQueHanClicat.Tag.ToString()[0];
+            if (operacioPendent != null)
+            {
+                decimal valorPantalla = decimal.Parse(txbPantalla.Text);
+                //fer operació pendent i guardar-la a l'acumulador
+                switch (operacioPendent)
+                {
+                    case '+': { acumulador += valorPantalla; break; } 
+                    case '-': { acumulador -= valorPantalla; break; } 
+                    case '/': { acumulador /= valorPantalla; break; } 
+                    case '*': { acumulador *= valorPantalla; break; }
+                    default: throw new Exception("Operació desconeguda");
+                }
+                if (operacioChar == '=')
+                {
+                    txbPantalla.Text = acumulador + "";
+                    operacioPendent = null;
+                }  
+            }
+            if (operacioChar != '=')
+            {
+                if (operacioPendent == null) {
+                    this.acumulador = decimal.Parse(txbPantalla.Text);
+                }
+                operacioPendent = operacioChar;
+                pendentEsborrar = true;
+            }
         }
     }
 }

@@ -20,7 +20,7 @@
         </Style>
     </Page.Resources>
     <StackPanel Orientation="Vertical">
-        <TextBox Background="Black" Text="0" Foreground="Lime" FontSize="60"></TextBox>
+        <TextBox x:Name="txbPantalla" Background="Black" Text="0" Foreground="Lime" FontSize="60"></TextBox>
         <Grid x:Name="grdTeclat">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"></ColumnDefinition>
@@ -35,12 +35,13 @@
                 <RowDefinition Height="*"></RowDefinition>
                 <RowDefinition Height="*"></RowDefinition>
             </Grid.RowDefinitions>
-            <Button Content="C" Grid.Row="0" Grid.Column="0" ></Button>
-            <Button Content="/" Grid.Row="0" Grid.Column="3"></Button>
-            <Button Content="*" Grid.Row="1" Grid.Column="3"></Button>
-            <Button Content="-" Grid.Row="2" Grid.Column="3"></Button>
-            <Button Content="+" Grid.Row="3" Grid.Column="3"></Button>
-            <Button Content="0" Grid.Row="4" Grid.Column="1"></Button>
+            <Button Content="C" Click="Clear_Click" Grid.Row="0" Grid.Column="0" ></Button>
+            <Button Content="/" Tag="/" Click="Operacio_Click" Grid.Row="0" Grid.Column="3"></Button>
+            <Button Content="*" Tag="*" Click="Operacio_Click" Grid.Row="1" Grid.Column="3"></Button>
+            <Button Content="-" Tag="-" Click="Operacio_Click" Grid.Row="2" Grid.Column="3"></Button>
+            <Button Content="+" Tag="+" Click="Operacio_Click" Grid.Row="3" Grid.Column="3"></Button>
+            <Button Content="=" Tag="=" Click="Operacio_Click" Grid.Row="4" Grid.Column="3"></Button>
+            <Button Content="0" Tag="0" Click="Numero_Click" Grid.Row="4" Grid.Column="1"></Button>
 
         </Grid>
     </StackPanel>
