@@ -6,27 +6,67 @@ using System.Threading.Tasks;
 
 namespace AppClasses.Model
 {
-    class Persona
+    class Persona : IComparable
     {
-        private int id;
         private String nom;
+        private int id;
 
-        private int identificador;
-
-        public int Identificador
+        public Persona(int id, string nom)
         {
-            get { return identificador; }
+            Nom = nom;
+            Id = id;
+        }
+        //-------------------------------------------------
+        #region Properties
+
+        public String Nom
+        {
+            get { return nom; }
             set {
-                if (value < 100) throw new Exception("PUGGGGGGG");
-                identificador = value; }
+                if (value == null || value.Trim().Length < 2){ 
+                    throw new Exception("El nom ha de ser not null i tenir 2 lletres com a mínim ");
+                }
+                nom = value;                
+            }
         }
 
-
-        private static void prova()
+        public int Id
         {
-            Persona p = new Persona();
-            p.Identificador = 12;
-            int i = p.Identificador;
+            get { return id; }
+            set { 
+                if(value <= 0) throw new Exception("Id ha de ser positiu");
+                id = value; }
         }
+
+        public int CompareTo(object laltre)
+        {
+            if( !(laltre is Persona)) return 1;
+            Persona p = (Persona) laltre;
+            return this.Id - p.Id;
+        }
+
+        public override bool Equals(object obj)
+        {
+            return obj is Persona persona &&
+                   Id == persona.Id;
+        }
+
+        public override int GetHashCode()
+        {
+            return 2108858624 + Id.GetHashCode();
+        }
+
+        public override string ToString()
+        {
+            return $"{Id}: {Nom}";
+            //return Id + ":" + Nom;
+        }
+
+
+        #endregion
+
+
+
+
     }
 }
