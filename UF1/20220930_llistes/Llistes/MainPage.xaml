@@ -1,0 +1,40 @@
+﻿<Page
+    x:Class="Llistes.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Llistes"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Loaded="Page_Loaded"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page.Resources>
+        <DataTemplate x:Key="ListViewItemTemplate1">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="{Binding Id}"></TextBlock>
+                <TextBlock Text="-"></TextBlock>
+                <TextBlock Text="{Binding Nom}"></TextBlock>
+            </StackPanel>
+        </DataTemplate>
+    </Page.Resources>
+
+
+    <StackPanel Orientation="Vertical">
+        <ListView  x:Name="lsvPersones" 
+                  SelectionChanged="lsvPersones_SelectionChanged">
+            <ListView.ItemTemplate>
+                <DataTemplate >
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{Binding Id}"></TextBlock>
+                        <TextBlock Text="-"></TextBlock>
+                        <TextBlock Text="{Binding Nom}"></TextBlock>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <TextBox x:Name="txbNou"></TextBox>
+        <Button Click="Button_Click">Afegir</Button>
+        <Button x:Name="btnUpdate" Click="btnUpdate_Click">Update</Button>
+        <Button x:Name="btnDelete" Click="btnDelete_Click">Delete</Button>
+    </StackPanel>
+</Page>

@@ -54,18 +54,71 @@ namespace AppClasses
             txbSortida.Text +=  "He afegit?"+lc.addAlumne(p) + "\n";
             txbSortida.Text +=  "He afegit?"+lc.addAlumne(new Persona(1, "Paco")) + "\n";
 
-            LlistaClasse seriosa = new LlistaClasse();
-            seriosa.addAlumne(new Persona(2, "Maria"));
-            seriosa.addAlumne(new Persona(4, "Pep"));
-            seriosa.addAlumne(new Persona(1, "Paco"));
-            seriosa.addAlumne(new Persona(6, "Cristina"));
-            txbSortida.Text += seriosa.ToString();
-            seriosa.esborrarAlumne(1);
-            seriosa.esborrarAlumne(89);
-            txbSortida.Text += seriosa.ToString();
+            LlistaClasse llistaSeriosa = new LlistaClasse();
+            llistaSeriosa.addAlumne(new Persona(2, "Maria"));
+            llistaSeriosa.addAlumne(new Persona(4, "Pep"));
+            llistaSeriosa.addAlumne(new Persona(1, "Paco"));
+            llistaSeriosa.addAlumne(new Persona(6, "Cristina"));
+            txbSortida.Text += llistaSeriosa.ToString();
+            llistaSeriosa.esborrarAlumne(1);
+            llistaSeriosa.esborrarAlumne(89);
+            txbSortida.Text += llistaSeriosa.ToString();
 
-            lsvClasse.ItemsSource = seriosa.alumnes;
-            cboClasse.ItemsSource = seriosa.alumnes;
+            lsvClasse.ItemsSource = llistaSeriosa.alumnes;
+            cboClasse.ItemsSource = llistaSeriosa.alumnes;
+            //------------------------------------
+            Dictionary<String, Persona> indexPerNomDePersones
+                = new Dictionary<String, Persona>();
+            indexPerNomDePersones["Maria"] = new Persona(2, "Maria");
+
+            int idDeLaMaria = indexPerNomDePersones["Maria"].Id;
+
+
+            foreach(Persona pers in llistaSeriosa.alumnes)
+            {
+                indexPerNomDePersones[pers.Nom] = pers;
+            }
+            if (indexPerNomDePersones.ContainsKey("Juanito"))
+            {
+                Persona juanitoPerson = indexPerNomDePersones["Juanito"];
+            }
+            txbSortida.Text += "==== Noms dins del diccionari ======";
+            foreach (String nom in indexPerNomDePersones.Keys)
+            {
+                txbSortida.Text += nom + "\n";
+            }
+            //================================
+            String[] paraules = { "Primer", "Caca", "Pedo", "Pis", "Pis", "Segon" };
+
+            Dictionary<String, Int32> frequencies = new Dictionary<String, Int32>();
+            foreach(String paraula in paraules)
+            {
+                int f = 0;
+                if(frequencies.ContainsKey(paraula))
+                {
+                    f = frequencies[paraula];
+                }
+                f++;
+                frequencies[paraula] = f;
+            }
+        }
+
+        private void cboClasse_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            lsvClasse.SelectedIndex = cboClasse.SelectedIndex;
+
+                
+        }
+
+        private void lsvClasse_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (lsvClasse.SelectedItem != null)
+            {
+                Persona p = (Persona)lsvClasse.SelectedItem;
+                txbId.Text = p.Id + "";
+                txbNom.Text = p.Nom;
+            }
+            
         }
     }
 }

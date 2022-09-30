@@ -16,7 +16,9 @@
                  AcceptsReturn="True">
             
         </TextBox>
-        <ListView x:Name="lsvClasse"></ListView>
-        <ComboBox x:Name="cboClasse"></ComboBox>
+        <ListView x:Name="lsvClasse" SelectionChanged="lsvClasse_SelectionChanged"></ListView>
+        <ComboBox x:Name="cboClasse" SelectionChanged="cboClasse_SelectionChanged"></ComboBox>
+        <TextBox x:Name="txbId"></TextBox>
+        <TextBox x:Name="txbNom"></TextBox>
     </StackPanel>
 </Page>
