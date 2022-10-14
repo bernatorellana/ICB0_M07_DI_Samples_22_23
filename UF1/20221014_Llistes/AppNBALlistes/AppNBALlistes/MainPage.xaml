@@ -1,0 +1,52 @@
+﻿<Page
+    x:Class="AppNBALlistes.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:AppNBALlistes"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    Loaded="Page_Loaded">
+
+    <Grid>
+        <ListView x:Name="lsvEquips">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="100"></ColumnDefinition>
+                            <ColumnDefinition Width="2*"></ColumnDefinition>
+                            <ColumnDefinition Width="1*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"></RowDefinition>
+                            <RowDefinition Height="auto"></RowDefinition>
+                            <RowDefinition Height="auto"></RowDefinition>
+                        </Grid.RowDefinitions>
+
+                        <Image 
+            Grid.Column="0"
+            Grid.Row="0"
+            Grid.RowSpan="3"
+            Source="{Binding UrlLogo}"></Image>
+                        <TextBlock 
+            Grid.Column="1"
+            Grid.Row="0"
+            Text="{Binding Nom}"></TextBlock>
+                        <TextBlock 
+            Grid.Column="1"
+            Grid.Row="1"
+            FontSize="10"
+            TextWrapping="Wrap"
+            Text="{Binding Desc }"></TextBlock>
+                        <Viewbox Grid.Column="1"
+            Grid.Row="2" MaxHeight="50" MaxWidth="200">
+                            <DatePicker Date="{Binding DataCreacioO}" ></DatePicker>
+                        </Viewbox>
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+</Page>
