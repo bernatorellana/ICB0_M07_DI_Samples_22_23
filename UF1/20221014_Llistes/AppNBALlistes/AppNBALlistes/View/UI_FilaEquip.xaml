@@ -7,7 +7,8 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     d:DesignHeight="300"
-    d:DesignWidth="400">
+    d:DesignWidth="400"
+    x:Name="uscFilaEquip">
 
     <Grid>
         <Grid.ColumnDefinitions>
@@ -25,20 +26,23 @@
             Grid.Column="0"
             Grid.Row="0"
             Grid.RowSpan="3"
-            Source="https://upload.wikimedia.org/wikipedia/en/thumb/c/c2/Minnesota_Timberwolves_logo.svg/1200px-Minnesota_Timberwolves_logo.svg.png"></Image>
+            Source="{Binding ElementName=uscFilaEquip,Path=Team.UrlLogo, FallbackValue='https://upload.wikimedia.org/wikipedia/en/thumb/c/c2/Minnesota_Timberwolves_logo.svg/1200px-Minnesota_Timberwolves_logo.svg.png'}"></Image>
         <TextBlock 
             Grid.Column="1"
             Grid.Row="0"
-            Text="Minessota Timberwolves"></TextBlock>
+            Text="{Binding ElementName=uscFilaEquip,Path=Team.Nom,FallbackValue='Minessota Timberwolves'}"></TextBlock>
         <TextBlock 
             Grid.Column="1"
             Grid.Row="1"
             FontSize="10"
             TextWrapping="Wrap"
-            Text="Minnesota, which gets its name from the Dakota language, has been inhabited by various indigenous peoples since the Woodland period of the 11th century BCE. Between roughly 200 and 500 CE, two are"></TextBlock>
+            Text="{Binding ElementName=uscFilaEquip,Path=Team.Desc, FallbackValue='Lorem ipsum dolor kajsdhf lkjashd fkljadshf lkjshd fkljsh dlkjfha skdjlfh alsjkdf '}"></TextBlock>
         <Viewbox Grid.Column="1"
             Grid.Row="2" MaxHeight="50" MaxWidth="200">
-            <DatePicker  ></DatePicker>
+            <DatePicker  
+                Date="{Binding ElementName=uscFilaEquip,
+                        Path=Team.DataCreacio}">
+                </DatePicker>
         </Viewbox>
     </Grid>
 </UserControl>

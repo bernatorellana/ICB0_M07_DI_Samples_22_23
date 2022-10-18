@@ -4,7 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:AppNBALlistes"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:view="using:AppNBALlistes.View"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
     Loaded="Page_Loaded">
@@ -13,6 +13,11 @@
         <ListView x:Name="lsvEquips">
             <ListView.ItemTemplate>
                 <DataTemplate>
+
+                    <view:UI_FilaEquip Team="{Binding}"></view:UI_FilaEquip>
+                    
+                    
+                    <!--
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="100"></ColumnDefinition>
@@ -45,6 +50,7 @@
                             <DatePicker Date="{Binding DataCreacioO}" ></DatePicker>
                         </Viewbox>
                     </Grid>
+                    -->
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AppNBALlistes.Model;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -23,5 +24,22 @@ namespace AppNBALlistes.View
         {
             this.InitializeComponent();
         }
+
+
+        
+        public Equip Team
+        {
+            get { return (Equip)GetValue(teamProperty); }
+            set { SetValue(teamProperty, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for jugador.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty teamProperty =
+            DependencyProperty.Register("Team", 
+                typeof(Equip), 
+                typeof(UI_FilaEquip), // nom de la classe on estem
+                new PropertyMetadata(null));
+
+
     }
 }
