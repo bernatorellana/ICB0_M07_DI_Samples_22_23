@@ -8,7 +8,14 @@
     mc:Ignorable="d"
     d:DesignHeight="300"
     d:DesignWidth="400"
-    x:Name="uscFilaEquip">
+    x:Name="uscFilaEquip"
+    >
+    <UserControl.Background>
+        <LinearGradientBrush>
+            <GradientStop Color="#FFECECEC" Offset="0"/>
+            <GradientStop Color="#FFFFD100" Offset="1"/>
+        </LinearGradientBrush>
+    </UserControl.Background>
 
     <Grid>
         <Grid.ColumnDefinitions>
@@ -26,16 +33,20 @@
             Grid.Column="0"
             Grid.Row="0"
             Grid.RowSpan="3"
+            Margin="5"
             Source="{Binding ElementName=uscFilaEquip,Path=Team.UrlLogo, FallbackValue='https://upload.wikimedia.org/wikipedia/en/thumb/c/c2/Minnesota_Timberwolves_logo.svg/1200px-Minnesota_Timberwolves_logo.svg.png'}"></Image>
         <TextBlock 
             Grid.Column="1"
             Grid.Row="0"
+                        Padding="10"
+
             Text="{Binding ElementName=uscFilaEquip,Path=Team.Nom,FallbackValue='Minessota Timberwolves'}"></TextBlock>
         <TextBlock 
             Grid.Column="1"
             Grid.Row="1"
             FontSize="10"
             TextWrapping="Wrap"
+            Padding="10"
             Text="{Binding ElementName=uscFilaEquip,Path=Team.Desc, FallbackValue='Lorem ipsum dolor kajsdhf lkjashd fkljadshf lkjshd fkljsh dlkjfha skdjlfh alsjkdf '}"></TextBlock>
         <Viewbox Grid.Column="1"
             Grid.Row="2" MaxHeight="50" MaxWidth="200">
@@ -44,5 +55,10 @@
                         Path=Team.DataCreacio}">
                 </DatePicker>
         </Viewbox>
+
+        <local:UI_PlayersEquip Grid.Column="2" Grid.RowSpan="3" 
+                               Team="{Binding ElementName=uscFilaEquip, Path=Team}"
+                               ></local:UI_PlayersEquip>
+        
     </Grid>
 </UserControl>

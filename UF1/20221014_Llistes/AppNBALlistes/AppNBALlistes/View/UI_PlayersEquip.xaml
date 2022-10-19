@@ -1,0 +1,34 @@
+﻿<UserControl
+    x:Class="AppNBALlistes.View.UI_PlayersEquip"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:AppNBALlistes.View"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="600"
+    d:DesignWidth="400"
+    x:Name="uscMain">
+
+    <StackPanel>
+        <Image Height="200" Source="{Binding ElementName=uscMain, Path=Team.Coach.UrlFoto}"></Image>
+
+        <ListView ItemsSource="{Binding ElementName=uscMain, Path=Team.Jugadors}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="50"></ColumnDefinition>
+                            <ColumnDefinition Width="1*"></ColumnDefinition>
+                            <ColumnDefinition Width="1*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="{Binding Dorsal}" Grid.Column="0"></TextBlock>
+                        <TextBlock Text="{Binding Nom}" Grid.Column="1"></TextBlock>
+                        <Image Source="{Binding UrlFoto}" Grid.Column="2"></Image>
+                        
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackPanel>
+</UserControl>

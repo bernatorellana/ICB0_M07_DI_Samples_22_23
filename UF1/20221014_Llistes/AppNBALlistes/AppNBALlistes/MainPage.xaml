@@ -14,7 +14,9 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
 
-                    <view:UI_FilaEquip Team="{Binding}"></view:UI_FilaEquip>
+                    <view:UI_FilaEquip Team="{Binding}">
+                        
+                    </view:UI_FilaEquip>
                     
                     
                     <!--

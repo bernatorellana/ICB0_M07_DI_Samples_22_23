@@ -35,7 +35,7 @@ namespace AppNBALlistes.Model
         public string Desc { get => desc; set => desc = value; }
         public DateTime DataCreacio { get => dataCreacio; set => dataCreacio = value; }
         public DateTimeOffset DataCreacioO { get => dataCreacio;  }
-        public OC<Jugador> Jugador { get => jugador; set => jugador = value; }
+        public OC<Jugador> Jugadors { get => jugador; set => jugador = value; }
         public Persona Coach { get => coach; set => coach = value; }
         public Conferencia Conf { get => conf; set => conf = value; }
 
@@ -43,12 +43,12 @@ namespace AppNBALlistes.Model
 
         public Boolean Add(Jugador nouJugador)
         {
-            if (this.Jugador.Contains(nouJugador))
+            if (this.Jugadors.Contains(nouJugador))
             {
                 return false;
             }
 
-            this.Jugador.Add(nouJugador);
+            this.Jugadors.Add(nouJugador);
 
             return true;
         }
