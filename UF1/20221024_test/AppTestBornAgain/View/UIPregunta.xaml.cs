@@ -51,31 +51,50 @@ namespace AppTestBornAgain.View
         private void LaPreguntaChanged(DependencyPropertyChangedEventArgs e)
         {
             // Netegem l'stackpanel
+
+            foreach (RadioButton rb in stpRespostes.Children)
+            {
+                rb.Checked -= Rb_Checked;
+                rb.Unchecked -= Rb_Unchecked;
+            }
+
             stpRespostes.Children.Clear();
             foreach( Resposta r in LaPregunta.Respostes)
             {
                 //<RadioButton Content="Aquesta és una resposta"></RadioButton>
                 RadioButton rb = new RadioButton();
                 rb.Content = r.Text;
-                rb.IsChecked = r.Seleccionada;
+                rb.Tag = r; // tricky !
+                if (r.Seleccionada)
+                {
+                    rb.IsChecked = r.Seleccionada;
+                }
+                stpRespostes.Children.Add(rb);
+            }
+            foreach(RadioButton rb in stpRespostes.Children)
+            {
                 rb.Checked += Rb_Checked;
                 rb.Unchecked += Rb_Unchecked;
-     
-                stpRespostes.Children.Add(rb);
             }
             
         }
 
         private void Rb_Unchecked(object sender, RoutedEventArgs e)
         {
-            throw new NotImplementedException();
+            SelecionaPregunta(sender, false);
         }
 
         private void Rb_Checked(object sender, RoutedEventArgs e)
         {
-            throw new NotImplementedException();
+            SelecionaPregunta(sender, true);            
         }
 
-     
+        private static void SelecionaPregunta(object sender, bool seleccionada)
+        {
+            RadioButton rb = (RadioButton)sender;
+            Resposta r = (Resposta)rb.Tag;
+            r.Seleccionada = seleccionada;
+        }
+
     }
 }
