@@ -58,5 +58,25 @@ namespace AppTestBornAgain
         {
             IndexPreguntaSeleccionada--;
         }
+
+        private void btnFinal_Click(object sender, RoutedEventArgs e)
+        {
+            CalculaPuntuacio();
+        }
+
+        private void CalculaPuntuacio()
+        {
+            double puntuacio = 0;
+            foreach (Pregunta p in Pregunta.getPreguntesTest())
+            {
+                puntuacio += p.getPuntuacio();
+            }
+            txtPuntuacio.Text = "Has tret un :" + puntuacio;
+        }
+
+        private void pregPregunta_PreguntaCanviada(object sender, EventArgs e)
+        {
+            CalculaPuntuacio();
+        }
     }
 }

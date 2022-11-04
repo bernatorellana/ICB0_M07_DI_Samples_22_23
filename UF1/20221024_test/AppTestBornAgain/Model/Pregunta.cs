@@ -61,5 +61,30 @@ namespace AppTestBornAgain.Model
         public string Enunciat { get => enunciat; set => enunciat = value; }
         public List<Resposta> Respostes { get => respostes; set => respostes = value; }
         public bool EsMultiresposta { get => esMultiresposta; set => esMultiresposta = value; }
+
+        internal double getPuntuacio()
+        {
+            double puntuacio = 0;
+            double numeroRespostesOk = 0;
+            foreach(Resposta r in Respostes)
+            {
+                if (r.Correcta) 
+                {
+                    numeroRespostesOk++;
+                    if (r.Seleccionada)
+                    {
+                        puntuacio++;
+                    }
+                } 
+                else
+                {
+                    if (r.Seleccionada)
+                    {
+                        puntuacio--;
+                    }
+                }                
+            } // end for
+            return puntuacio / numeroRespostesOk;
+        }
     }
 }

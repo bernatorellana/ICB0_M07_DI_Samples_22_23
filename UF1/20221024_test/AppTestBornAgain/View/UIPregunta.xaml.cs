@@ -25,9 +25,8 @@ namespace AppTestBornAgain.View
             this.InitializeComponent();
         }
 
-
-
-
+        // declarem l'event PreguntaCanviada a UIPregunta
+        public event EventHandler PreguntaCanviada;
 
 
         public Pregunta LaPregunta
@@ -82,18 +81,20 @@ namespace AppTestBornAgain.View
         private void Rb_Unchecked(object sender, RoutedEventArgs e)
         {
             SelecionaPregunta(sender, false);
+            PreguntaCanviada?.Invoke(this, new EventArgs());
         }
 
         private void Rb_Checked(object sender, RoutedEventArgs e)
-        {
-            SelecionaPregunta(sender, true);            
+        {            
+            SelecionaPregunta(sender, true);
+            PreguntaCanviada?.Invoke(this, new EventArgs());
         }
 
         private static void SelecionaPregunta(object sender, bool seleccionada)
         {
             RadioButton rb = (RadioButton)sender;
             Resposta r = (Resposta)rb.Tag;
-            r.Seleccionada = seleccionada;
+            r.Seleccionada = seleccionada;            
         }
 
     }
