@@ -11,6 +11,8 @@
     <StackPanel Orientation="Vertical">
         <view:UINumericUpDown x:Name="nudNumero" Width="200"
                               Value="90"
+                              Max="40"
+                              Min="0"
                               OnValueChanged="nudNumero_OnValueChanged"></view:UINumericUpDown>
 
         <TextBlock Text="{Binding ElementName=nudNumero,Path=Value}"></TextBlock>

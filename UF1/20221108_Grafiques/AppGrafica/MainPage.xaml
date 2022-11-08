@@ -1,0 +1,25 @@
+﻿<Page
+    x:Class="AppGrafica.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:AppGrafica"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:view="using:AppGrafica.View"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <view:UIBarra Grid.Column="0" Value="5"></view:UIBarra>
+        <view:UIBarra Grid.Column="1" Value="3"></view:UIBarra>
+        <view:UIBarra Grid.Column="2" Value="1"></view:UIBarra>
+        <view:UIBarra Grid.Column="3" Value="10"></view:UIBarra>
+        <view:UIBarra Grid.Column="4" Value="5"></view:UIBarra>
+    </Grid>
+</Page>

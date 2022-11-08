@@ -22,6 +22,73 @@ namespace AppNumericUpDown.View
 
         public event EventHandler OnValueChanged;
 
+
+
+        public int Max
+        {
+            get { return (int)GetValue(MaxProperty); }
+            set { SetValue(MaxProperty, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for Max.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty MaxProperty =
+            DependencyProperty.Register("Max", typeof(int), typeof(UINumericUpDown), new PropertyMetadata(int.MaxValue,MaxPropertyChangedStatic));
+
+        private static void MaxPropertyChangedStatic(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            UINumericUpDown up = (UINumericUpDown)d;
+            up.MaxPropertyChanged();
+        }
+
+        private void MaxPropertyChanged()
+        {
+            if (Max < Min)
+            {
+                int tmp = Max;
+                Max = Min;
+                Min = tmp;
+            }
+            if (Value > Max)
+            {
+                Value = Max;
+            }
+        }
+
+        public int Min
+        {
+            get { return (int)GetValue(MinProperty); }
+            set { SetValue(MinProperty, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for Min.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty MinProperty =
+            DependencyProperty.Register("Min", typeof(int), typeof(UINumericUpDown), new PropertyMetadata(0, MinPropertyChangedStatic));
+
+
+
+        private static void MinPropertyChangedStatic(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            UINumericUpDown up = (UINumericUpDown)d;
+            up.MinPropertyChanged();
+        }
+
+        private void MinPropertyChanged()
+        {
+            if (Max < Min)
+            {
+                int tmp = Max;
+                Max = Min;
+                Min = tmp;
+            }
+            if (Value < Min)
+            {
+                Value = Min;
+            }
+        }
+
+
+
+
         public int Value
         {
             get { return (int)GetValue(ValueProperty); }
@@ -41,9 +108,15 @@ namespace AppNumericUpDown.View
 
         private void ValueChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
-
-            txtNum.Text = e.NewValue.ToString();
-            OnValueChanged?.Invoke(this, new EventArgs());
+            if ((int)e.NewValue < Min || (int)e.NewValue > Max)
+            {
+                Value = (int)e.OldValue;
+            }
+            else
+            {
+                txtNum.Text = e.NewValue.ToString();
+                OnValueChanged?.Invoke(this, new EventArgs());
+            }
         }
 
         public UINumericUpDown()
