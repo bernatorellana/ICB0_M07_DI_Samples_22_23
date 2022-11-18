@@ -24,8 +24,9 @@ namespace AppGrafica.View
         /// <summary>
         /// Número màxim de rectangles dins de la barra.
         /// </summary>
-        private const int N = 10;
+        private const int N = 30;
 
+        private const int MAX = 100;
         public UIBarra()
         {
             this.InitializeComponent();
@@ -53,7 +54,7 @@ namespace AppGrafica.View
         private void ValueChangedCallback()
         {
             // Això es crida cada vegada que canvia "Value"
-            int rectanglesIluminats = N * Value / 10;
+            int rectanglesIluminats = (N * Value) / MAX;
             for(int i = 0; i < grdColumna.Children.Count; i++)
             {
                 grdColumna.Children[i].Opacity = i > (N - rectanglesIluminats-1) ? 1 : 0.25;
@@ -77,7 +78,7 @@ namespace AppGrafica.View
                 Rectangle r = new Rectangle();
                 r.Fill = new SolidColorBrush(Colors.RosyBrown);
                 Grid.SetRow(r, i);
-                r.Opacity = 0; // Aquí es fa invisibles (totalment transparents)
+                r.Opacity = 0.25; // Aquí es fa invisibles (totalment transparents)
                 grdColumna.Children.Add(r);
             }
         }

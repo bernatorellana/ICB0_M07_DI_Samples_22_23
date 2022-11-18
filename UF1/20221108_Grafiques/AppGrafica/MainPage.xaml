@@ -4,22 +4,19 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:AppGrafica"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:view="using:AppGrafica.View"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:view="using:AppGrafica.View" xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    Loaded="Page_Loaded">
 
-    <Grid >
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
-        </Grid.ColumnDefinitions>
-        <view:UIBarra Grid.Column="0" Value="5"></view:UIBarra>
-        <view:UIBarra Grid.Column="1" Value="3"></view:UIBarra>
-        <view:UIBarra Grid.Column="2" Value="1"></view:UIBarra>
-        <view:UIBarra Grid.Column="3" Value="10"></view:UIBarra>
-        <view:UIBarra Grid.Column="4" Value="5"></view:UIBarra>
-    </Grid>
+    <StackPanel Orientation="Horizontal" >
+
+        <view:UIGrafica x:Name="uig" HorizontalAlignment="Stretch"></view:UIGrafica>
+        <controls:DataGrid x:Name="lsvValors" IsEnabled="True" IsReadOnly="False">
+
+        </controls:DataGrid>
+
+        <Button Click="Button_Click" x:Name="btnPause" Content="Pause"></Button>
+        
+    </StackPanel>
 </Page>
