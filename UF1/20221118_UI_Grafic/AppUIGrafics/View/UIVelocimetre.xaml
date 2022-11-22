@@ -11,16 +11,26 @@
 
     <Grid>
         <Canvas>
+            
+            
             <Ellipse Fill="Black" Canvas.Left="0" Canvas.Top="0"
                        Width="100" Height="100"></Ellipse>
             <Ellipse Fill="Green" Canvas.Left="10" Canvas.Top="10"
                        Width="80" Height="80"></Ellipse>
-            <Ellipse Fill="red" Canvas.Left="20" Canvas.Top="20"
-                       Width="60" Height="60">
-              
+            <Ellipse Fill="white" Canvas.Left="15" Canvas.Top="15"
+                       Width="70" Height="70">
             </Ellipse>
-            
-            
+            <Ellipse Fill="Green" Canvas.Left="30" Canvas.Top="30"
+                       Width="40" Height="40"></Ellipse>
+            <Ellipse Fill="white" Canvas.Left="35" Canvas.Top="35"
+                       Width="30" Height="30">
+            </Ellipse>
+
+            <Ellipse Fill="Green" Canvas.Left="42.5" Canvas.Top="42.5"
+                       Width="15" Height="15"></Ellipse>
+            <Ellipse Fill="Red" Canvas.Left="45" Canvas.Top="45"
+                       Width="10" Height="10"></Ellipse>
+
             <Polygon Fill="#99000000" Points="50,50, 99.38,42.2, 99.38, 57.8" ></Polygon>
             <Polygon Fill="#99000000" Points="50,50, 99.38,42.2, 99.38, 57.8" >
                 <Polygon.RenderTransform>
@@ -32,6 +42,28 @@
                     <RotateTransform Angle="72" CenterX="50" CenterY="50"></RotateTransform>
                 </Polygon.RenderTransform>
             </Polygon>
+
+            <TextBlock TextAlignment="Center" FontWeight="Bold" FontSize="7" Foreground="White" Width="20" Height="10" Canvas.Left="40" Canvas.Top="0">20</TextBlock>
+            <TextBlock TextAlignment="Center" FontWeight="Bold" FontSize="7" Foreground="White" Width="20" Height="10" Canvas.Left="40" Canvas.Top="0">
+                1
+
+                <TextBlock.RenderTransform>
+                    <TransformGroup>
+                        <RotateTransform Angle="18" CenterX="10" CenterY="50"/>
+                    </TransformGroup>
+                </TextBlock.RenderTransform>
+
+            </TextBlock>
+            <TextBlock TextAlignment="Center" FontWeight="Bold" FontSize="7" Foreground="White" Width="20" Height="10" Canvas.Left="40" Canvas.Top="0">
+                18
+
+                <TextBlock.RenderTransform>
+                    <TransformGroup>
+                        <RotateTransform Angle="36" CenterX="10" CenterY="50"/>
+                    </TransformGroup>
+                </TextBlock.RenderTransform>
+
+            </TextBlock>
 
         </Canvas>
     </Grid>
