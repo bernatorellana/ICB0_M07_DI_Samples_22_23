@@ -25,6 +25,7 @@ namespace AppUIGrafics
         public MainPage()
         {
             this.InitializeComponent();
+            
         }
     }
 }
