@@ -9,7 +9,8 @@
     d:DesignHeight="300"
     d:DesignWidth="400" Loaded="UserControl_Loaded" SizeChanged="UserControl_SizeChanged">
 
-    <Grid>
+    <StackPanel Orientation="Vertical">
+        <TextBlock x:Name="txtScore" ></TextBlock>
         <Canvas x:Name="cnvDiana" Tapped="cnvDiana_Tapped">
             
             <!--
@@ -66,5 +67,5 @@
             </TextBlock>
 -->
         </Canvas>
-    </Grid>
+    </StackPanel>
 </UserControl>

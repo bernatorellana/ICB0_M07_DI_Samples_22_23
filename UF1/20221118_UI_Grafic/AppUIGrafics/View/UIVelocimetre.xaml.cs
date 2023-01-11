@@ -21,6 +21,12 @@ namespace AppUIGrafics.View
 {
     public sealed partial class UIVelocimetre : UserControl
     {
+
+        double[] diametres = { 100.0, 80.0, 70.0, 40.0, 30.0, 10.0, 5.0 };
+        int[] zones = { 0, 2, 1, 3, 1, 25, 50 };
+        Color[] colors = { Colors.Black, Colors.Green, Colors.White, Colors.Green, Colors.White, Colors.Green, Colors.Red };
+
+
         public UIVelocimetre()
         {
             this.InitializeComponent();
@@ -31,9 +37,7 @@ namespace AppUIGrafics.View
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
         {
             cnvDiana.Children.Clear();
-            double mida = Math.Min(ActualWidth, ActualHeight);
-            double[] diametres = { 100.0, 80.0, 70.0, 40.0, 30.0, 10.0, 5.0 };
-            Color[] colors = { Colors.Black, Colors.Green, Colors.White, Colors.Green, Colors.White, Colors.Green, Colors.Red };
+            double mida = getMida();
             for (int i = 0; i < diametres.Length; i++)
             {
                 Ellipse el = new Ellipse();
@@ -45,7 +49,7 @@ namespace AppUIGrafics.View
                 Canvas.SetLeft(el, marge);
                 cnvDiana.Children.Add(el);
             }
-            double angleOffset = 0;// +Math.PI*0.5;
+            double angleOffset = -90;
             int[] numeros = { 20, 1, 18, 4, 13, 6, 10, 15, 2, 17, 3, 19,
                 7, 16, 8, 11, 14, 9, 12, 5 };
             for (int i = 0; i < 20; i++)
@@ -141,7 +145,24 @@ namespace AppUIGrafics.View
 
         private void P_Tapped(object sender, TappedRoutedEventArgs e)
         {
-           int num =(int) ((Polygon)sender).Tag;
+            double mida = getMida();
+            int num = (int)((Polygon)sender).Tag;
+            Point p = e.GetPosition(cnvDiana);
+            double d = Math.Sqrt(Math.Pow(p.X - mida / 2, 2) + Math.Pow(p.Y - mida / 2, 2));
+            double z = d / (mida / 2); //0.75
+            int n = 0;
+            for (n = 0; n<diametres.Length && z < diametres[n]/100.0; n++) ;
+            int puntuacio = 0;
+            n--;
+            if(zones[n] >= 25) { puntuacio = (int)(zones[n]); }
+            else { puntuacio = (int)( num * zones[n]); }
+            txtScore.Text = puntuacio + "";
+        }
+
+
+        private double getMida()
+        {
+            return Math.Min(ActualWidth, ActualHeight);
         }
 
         private void UserControl_SizeChanged(object sender, SizeChangedEventArgs e)
