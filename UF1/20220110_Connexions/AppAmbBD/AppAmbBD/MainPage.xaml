@@ -76,7 +76,7 @@
                 <TextBlock Grid.Column="0" Grid.Row="2" Padding="5" VerticalAlignment="Center" HorizontalAlignment="Right">Cap:</TextBlock>
                 <ComboBox x:Name="cboCap" Grid.Column="1" Grid.Row="2"  HorizontalAlignment="Stretch"></ComboBox>
                 <TextBlock Grid.Column="0" Grid.Row="3" Padding="5" VerticalAlignment="Center" HorizontalAlignment="Right">Data alta:</TextBlock>
-                <TextBox x:Name="txbDataAlta" Grid.Column="1" Grid.Row="3"></TextBox>
+                <DatePicker x:Name="txbDataAlta" Grid.Column="1" Grid.Row="3"></DatePicker>
                 <TextBlock Grid.Column="0" Grid.Row="4" Padding="5" VerticalAlignment="Center" HorizontalAlignment="Right">Salari:</TextBlock>
                 <TextBox x:Name="txbSalari" Grid.Column="1" Grid.Row="4"></TextBox>
                 <TextBlock Grid.Column="0" Grid.Row="5" Padding="5" VerticalAlignment="Center" HorizontalAlignment="Right">Comissió:</TextBlock>
