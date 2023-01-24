@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30717.126
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppAmbBD", "AppAmbBD\AppAmbBD.csproj", "{B633B2CF-82DE-481F-A0F4-62E0FA405B1D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBLib", "DBLib\DBLib.csproj", "{AAEDFE8A-AB6E-49BE-ABFE-8381165D6D68}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DBLib", "DBLib\DBLib.csproj", "{AAEDFE8A-AB6E-49BE-ABFE-8381165D6D68}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
