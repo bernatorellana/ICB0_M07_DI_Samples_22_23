@@ -7,6 +7,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    x:Name="pageEmpleat"
     Loaded="Page_Loaded">
 
     <StackPanel Orientation="Vertical">
@@ -47,7 +48,7 @@
                 </Button>
             </StackPanel>
         </Grid>
-        <Grid Padding="5">
+        <Grid Padding="15">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="2*"></ColumnDefinition>
                 <ColumnDefinition Width="1*"></ColumnDefinition>
@@ -56,8 +57,8 @@
             <Grid Grid.Column="1"
                   RowSpacing="8" ColumnSpacing="5">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition></ColumnDefinition>
-                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="2*"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
                     <RowDefinition></RowDefinition>
@@ -70,19 +71,32 @@
                     <RowDefinition></RowDefinition>
                 </Grid.RowDefinitions>
                 <TextBlock Grid.Column="0" Grid.Row="0" Padding="5" VerticalAlignment="Center" HorizontalAlignment="Right">Cognom:</TextBlock>
-                <TextBox x:Name="txbCognom" Grid.Column="1" Grid.Row="0"></TextBox>
+                <TextBox x:Name="txbCognom" Grid.Column="1" Grid.Row="0"
+                         Text="{Binding ElementName=pageEmpleat,Path=EmpleatSeleccionat.Cognom}"
+                         ></TextBox>
                 <TextBlock Grid.Column="0" Grid.Row="1" Padding="5" VerticalAlignment="Center" HorizontalAlignment="Right">Ofici:</TextBlock>
-                <TextBox x:Name="txbOfici" Grid.Column="1" Grid.Row="1"></TextBox>
+                <TextBox x:Name="txbOfici" Grid.Column="1" Grid.Row="1"
+                         Text="{Binding ElementName=pageEmpleat,Path=EmpleatSeleccionat.Ofici}"
+                         ></TextBox>
                 <TextBlock Grid.Column="0" Grid.Row="2" Padding="5" VerticalAlignment="Center" HorizontalAlignment="Right">Cap:</TextBlock>
-                <ComboBox x:Name="cboCap" Grid.Column="1" Grid.Row="2"  HorizontalAlignment="Stretch"></ComboBox>
+                <ComboBox x:Name="cboCap" Grid.Column="1" Grid.Row="2"
+                          SelectedValue="{Binding ElementName=pageEmpleat, 
+                                            Path=EmpleatSeleccionat.Cap}"
+                          HorizontalAlignment="Stretch"></ComboBox>
                 <TextBlock Grid.Column="0" Grid.Row="3" Padding="5" VerticalAlignment="Center" HorizontalAlignment="Right">Data alta:</TextBlock>
-                <DatePicker x:Name="txbDataAlta" Grid.Column="1" Grid.Row="3"></DatePicker>
+                <DatePicker x:Name="txbDataAlta" Grid.Column="1" Grid.Row="3" HorizontalAlignment="Center"></DatePicker>
                 <TextBlock Grid.Column="0" Grid.Row="4" Padding="5" VerticalAlignment="Center" HorizontalAlignment="Right">Salari:</TextBlock>
-                <TextBox x:Name="txbSalari" Grid.Column="1" Grid.Row="4"></TextBox>
+                <TextBox x:Name="txbSalari" Grid.Column="1" Grid.Row="4"
+                         Text="{Binding ElementName=pageEmpleat,Path=EmpleatSeleccionat.Salari}"
+                         ></TextBox>
                 <TextBlock Grid.Column="0" Grid.Row="5" Padding="5" VerticalAlignment="Center" HorizontalAlignment="Right">Comissió:</TextBlock>
-                <TextBox x:Name="txbComissio" Grid.Column="1" Grid.Row="5"></TextBox>
+                <TextBox x:Name="txbComissio" Grid.Column="1" Grid.Row="5"
+                         Text="{Binding ElementName=pageEmpleat,Path=EmpleatSeleccionat.Comissio}"
+                         ></TextBox>
                 <TextBlock Grid.Column="0" Grid.Row="6" Padding="5" VerticalAlignment="Center" HorizontalAlignment="Right">Departament:</TextBlock>
-                <ComboBox x:Name="cboDepartament" Grid.Column="1" Grid.Row="6" HorizontalAlignment="Stretch"></ComboBox>
+                <ComboBox x:Name="cboDepartament" Grid.Column="1" Grid.Row="6" 
+                          SelectedValue="{Binding ElementName=pageEmpleat, Path=EmpleatSeleccionat.Dept_no}"
+                          HorizontalAlignment="Stretch"></ComboBox>
                 
                 <!--
 
@@ -93,5 +107,6 @@
             </Grid>
         </Grid>
         <Button x:Name="btnEsborrar"  Click="btnEsborrar_Click">Esborrar</Button>
+        <Button x:Name="btnAfegir"  Click="btnAfegir_Click">Afegir</Button>
     </StackPanel>
 </Page>

@@ -33,15 +33,41 @@ namespace AppAmbBD
             this.InitializeComponent();
         }
 
+
+
+        public EmpDB EmpleatSeleccionat
+        {
+            get { return (EmpDB)GetValue(EmpleatSeleccionatProperty); }
+            set { SetValue(EmpleatSeleccionatProperty, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for EmpleatSeleccionat.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty EmpleatSeleccionatProperty =
+            DependencyProperty.Register("EmpleatSeleccionat", typeof(EmpDB), typeof(MainPage), new PropertyMetadata(null));
+
+
+
+
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            EmpDB empleat = new EmpDB(123, "Paco2", "PROGRAMADOR", null, DateTime.Now, 1234.2M, 12.2M, 10);
+           /* EmpDB empleat = new EmpDB(123, "Paco2", "PROGRAMADOR", null, DateTime.Now, 1234.2M, 12.2M, 10);
             if (EmpDB.insert(empleat))
             {
                 int i = 0;
             }
-
+            */
             cerca();
+
+            ObservableCollection<EmpDB> totsElsEmpleats = EmpDB.getEmpleats("", null);
+            totsElsEmpleats.Insert(0, new EmpDB(-1, "", "", null, null, null, null, 0));
+            cboCap.ItemsSource = totsElsEmpleats;
+            cboCap.DisplayMemberPath = "Cognom";
+            cboCap.SelectedValuePath = "Emp_no";
+            //--------------------------------------------------------
+
+            cboDepartament.ItemsSource = DeptDB.getDepartaments();
+            cboDepartament.DisplayMemberPath = "Dnom";
+            cboDepartament.SelectedValuePath = "Dept_no";
 
             /*foreach( EmpDB em in empleats)
             {
@@ -105,8 +131,17 @@ namespace AppAmbBD
             EmpDB empleat = (EmpDB)grdDades.SelectedItem;
             btnEsborrar.IsEnabled = false;
             if (empleat != null) {                
-                btnEsborrar.IsEnabled = EmpDB.pucEsborrar(empleat);                           
+                btnEsborrar.IsEnabled = EmpDB.pucEsborrar(empleat);
+
+                EmpleatSeleccionat = empleat;
             }
+            //--------------------------------
+           
+        }
+
+        private void btnAfegir_Click(object sender, RoutedEventArgs e)
+        {
+            EmpleatSeleccionat = new EmpDB(0, "", "", null, null, null, null, -1);
         }
     }
 }
