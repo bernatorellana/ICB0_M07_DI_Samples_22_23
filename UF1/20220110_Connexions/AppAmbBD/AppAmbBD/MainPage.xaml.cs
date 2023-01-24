@@ -35,7 +35,7 @@ namespace AppAmbBD
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            EmpDB empleat = new EmpDB(123, "Paco", "PROGRAMADOR", null, DateTime.Now, 1234.2M, 12.2M, 10);
+            EmpDB empleat = new EmpDB(123, "Paco2", "PROGRAMADOR", null, DateTime.Now, 1234.2M, 12.2M, 10);
             if (EmpDB.insert(empleat))
             {
                 int i = 0;

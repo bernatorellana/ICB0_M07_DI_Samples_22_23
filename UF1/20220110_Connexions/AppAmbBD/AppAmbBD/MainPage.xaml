@@ -47,7 +47,51 @@
                 </Button>
             </StackPanel>
         </Grid>
-        <controls:DataGrid x:Name="grdDades" SelectionChanged="grdDades_SelectionChanged"></controls:DataGrid>
+        <Grid Padding="5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"></ColumnDefinition>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <controls:DataGrid Grid.Column="0" x:Name="grdDades" SelectionChanged="grdDades_SelectionChanged"></controls:DataGrid>
+            <Grid Grid.Column="1"
+                  RowSpacing="8" ColumnSpacing="5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Column="0" Grid.Row="0" Padding="5" VerticalAlignment="Center" HorizontalAlignment="Right">Cognom:</TextBlock>
+                <TextBox x:Name="txbCognom" Grid.Column="1" Grid.Row="0"></TextBox>
+                <TextBlock Grid.Column="0" Grid.Row="1" Padding="5" VerticalAlignment="Center" HorizontalAlignment="Right">Ofici:</TextBlock>
+                <TextBox x:Name="txbOfici" Grid.Column="1" Grid.Row="1"></TextBox>
+                <TextBlock Grid.Column="0" Grid.Row="2" Padding="5" VerticalAlignment="Center" HorizontalAlignment="Right">Cap:</TextBlock>
+                <ComboBox x:Name="cboCap" Grid.Column="1" Grid.Row="2"  HorizontalAlignment="Stretch"></ComboBox>
+                <TextBlock Grid.Column="0" Grid.Row="3" Padding="5" VerticalAlignment="Center" HorizontalAlignment="Right">Data alta:</TextBlock>
+                <TextBox x:Name="txbDataAlta" Grid.Column="1" Grid.Row="3"></TextBox>
+                <TextBlock Grid.Column="0" Grid.Row="4" Padding="5" VerticalAlignment="Center" HorizontalAlignment="Right">Salari:</TextBlock>
+                <TextBox x:Name="txbSalari" Grid.Column="1" Grid.Row="4"></TextBox>
+                <TextBlock Grid.Column="0" Grid.Row="5" Padding="5" VerticalAlignment="Center" HorizontalAlignment="Right">Comissió:</TextBlock>
+                <TextBox x:Name="txbComissio" Grid.Column="1" Grid.Row="5"></TextBox>
+                <TextBlock Grid.Column="0" Grid.Row="6" Padding="5" VerticalAlignment="Center" HorizontalAlignment="Right">Departament:</TextBlock>
+                <ComboBox x:Name="cboDepartament" Grid.Column="1" Grid.Row="6" HorizontalAlignment="Stretch"></ComboBox>
+                
+                <!--
+
+                            DBUtils.afegirParametre(comanda, "p_comissio", emp.comissio, DbType.Decimal);
+                            DBUtils.afegirParametre(comanda, "p_dept_no", emp.dept_no, DbType.Int32);
+
+                -->
+            </Grid>
+        </Grid>
         <Button x:Name="btnEsborrar"  Click="btnEsborrar_Click">Esborrar</Button>
     </StackPanel>
 </Page>

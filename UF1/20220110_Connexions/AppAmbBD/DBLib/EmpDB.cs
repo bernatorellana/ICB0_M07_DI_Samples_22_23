@@ -167,10 +167,16 @@ namespace DBLib
                 {
                     using (var connection = context.Database.GetDbConnection())
                     {
+
                         connection.Open();
+                        DbTransaction transaccio = connection.BeginTransaction();
+
                         using (var comanda = connection.CreateCommand())
                         {
                             comanda.CommandText = @"select last_id from ids where table_name = 'emp' for update";
+                            // assignar la comanda a la transacció
+                            comanda.Transaction = transaccio;
+
                             decimal last_id = (decimal)comanda.ExecuteScalar();
                             last_id++;
 
@@ -196,7 +202,11 @@ namespace DBLib
                                 DBUtils.afegirParametre(comanda, "p_last_id", last_id, DbType.Decimal);
                                 last_id++;
                                 int updated = comanda.ExecuteNonQuery();
-                                if (updated == 1) return true;
+                                if (updated == 1)
+                                {
+                                    transaccio.Commit();
+                                    return true;
+                                }
                             }
                             throw new Exception("Something weird happened");
                         }
