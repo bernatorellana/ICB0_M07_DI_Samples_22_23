@@ -30,15 +30,41 @@ namespace DBLib
             this.Comissio = comissio;
             this.Dept_no = dept_no;
         }
+
+        public EmpDB(EmpDB empleat)
+        {
+            this.Emp_no = empleat.emp_no;
+            this.Cognom = empleat.cognom;
+            this.Ofici = empleat.ofici;
+            this.Cap = empleat.cap;
+            this.Data_alta = empleat.data_alta;
+            this.Salari = empleat.salari;
+            this.Comissio = empleat.comissio;
+            this.Dept_no = empleat.dept_no;
+        }
+
         #region properties
         public int Emp_no { get => emp_no; set => emp_no = value; }
         public string Cognom { get => cognom; set => cognom = value; }
         public string Ofici { get => ofici; set => ofici = value; }
         public int? Cap { get => cap; set => cap = value; }
         public DateTime? Data_alta { get => data_alta; set => data_alta = value; }
+
+        public DateTimeOffset? Data_alta_offset
+        {
+            get
+            {
+                if (data_alta != null)
+                {
+                    return new DateTimeOffset(data_alta.Value);
+                }
+                else return null;
+            }
+        }
         public decimal? Salari { get => salari; set => salari = value; }
         public decimal? Comissio { get => comissio; set => comissio = value; }
         public int Dept_no { get => dept_no; set => dept_no = value; }
+        public EmpDB Empleat { get; }
         #endregion
 
 

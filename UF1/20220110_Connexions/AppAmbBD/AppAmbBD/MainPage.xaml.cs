@@ -50,6 +50,10 @@ namespace AppAmbBD
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
+
+
+            
+
            /* EmpDB empleat = new EmpDB(123, "Paco2", "PROGRAMADOR", null, DateTime.Now, 1234.2M, 12.2M, 10);
             if (EmpDB.insert(empleat))
             {
@@ -133,15 +137,42 @@ namespace AppAmbBD
             if (empleat != null) {                
                 btnEsborrar.IsEnabled = EmpDB.pucEsborrar(empleat);
 
-                EmpleatSeleccionat = empleat;
+                EmpleatSeleccionat =  new EmpDB(empleat);
             }
             //--------------------------------
            
         }
 
+        
+
         private void btnAfegir_Click(object sender, RoutedEventArgs e)
         {
             EmpleatSeleccionat = new EmpDB(0, "", "", null, null, null, null, -1);
+            grdDades.SelectedIndex = -1;
+        }
+
+        private void btnDesar_Click(object sender, RoutedEventArgs e)
+        {
+            if(grdDades.SelectedIndex == -1)
+            {
+                //new EmpDB(0, txbCognom.Text, "", null, null, null, null, -1);
+                bool insercioCorrecta = EmpDB.insert(EmpleatSeleccionat);
+                if (insercioCorrecta)
+                {
+                    cerca();
+                }
+
+            }
+        }
+
+        private void btnAfegir_Click_1(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnCancel_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

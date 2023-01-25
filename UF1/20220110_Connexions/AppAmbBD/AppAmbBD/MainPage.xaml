@@ -4,11 +4,14 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:AppAmbBD"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls" xmlns:converters="using:AppAmbBD.Converters"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
     x:Name="pageEmpleat"
     Loaded="Page_Loaded">
+    <Page.Resources>
+        <converters:DecimalConverter x:Key="DecimalConverterId"></converters:DecimalConverter>
+    </Page.Resources>
 
     <StackPanel Orientation="Vertical">
         <Grid Padding="10">
@@ -53,7 +56,8 @@
                 <ColumnDefinition Width="2*"></ColumnDefinition>
                 <ColumnDefinition Width="1*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <controls:DataGrid Grid.Column="0" x:Name="grdDades" SelectionChanged="grdDades_SelectionChanged"></controls:DataGrid>
+            <controls:DataGrid Grid.Column="0" x:Name="grdDades" 
+                               SelectionChanged="grdDades_SelectionChanged"></controls:DataGrid>
             <Grid Grid.Column="1"
                   RowSpacing="8" ColumnSpacing="5">
                 <Grid.ColumnDefinitions>
@@ -72,41 +76,50 @@
                 </Grid.RowDefinitions>
                 <TextBlock Grid.Column="0" Grid.Row="0" Padding="5" VerticalAlignment="Center" HorizontalAlignment="Right">Cognom:</TextBlock>
                 <TextBox x:Name="txbCognom" Grid.Column="1" Grid.Row="0"
-                         Text="{Binding ElementName=pageEmpleat,Path=EmpleatSeleccionat.Cognom}"
+                         Text="{Binding ElementName=pageEmpleat,Path=EmpleatSeleccionat.Cognom, Mode=TwoWay}"
                          ></TextBox>
                 <TextBlock Grid.Column="0" Grid.Row="1" Padding="5" VerticalAlignment="Center" HorizontalAlignment="Right">Ofici:</TextBlock>
                 <TextBox x:Name="txbOfici" Grid.Column="1" Grid.Row="1"
-                         Text="{Binding ElementName=pageEmpleat,Path=EmpleatSeleccionat.Ofici}"
+                         Text="{Binding ElementName=pageEmpleat,Path=EmpleatSeleccionat.Ofici, Mode=TwoWay}"
                          ></TextBox>
                 <TextBlock Grid.Column="0" Grid.Row="2" Padding="5" VerticalAlignment="Center" HorizontalAlignment="Right">Cap:</TextBlock>
                 <ComboBox x:Name="cboCap" Grid.Column="1" Grid.Row="2"
                           SelectedValue="{Binding ElementName=pageEmpleat, 
-                                            Path=EmpleatSeleccionat.Cap}"
+                                            Path=EmpleatSeleccionat.Cap, Mode=TwoWay}"
                           HorizontalAlignment="Stretch"></ComboBox>
                 <TextBlock Grid.Column="0" Grid.Row="3" Padding="5" VerticalAlignment="Center" HorizontalAlignment="Right">Data alta:</TextBlock>
-                <DatePicker x:Name="txbDataAlta" Grid.Column="1" Grid.Row="3" HorizontalAlignment="Center"></DatePicker>
+                <DatePicker x:Name="dtpDataAlta" Grid.Column="1" Grid.Row="3" HorizontalAlignment="Center"
+                            Date="{Binding ElementName=pageEmpleat,Path=EmpleatSeleccionat.Data_alta_offset, Mode=TwoWay}"
+                            ></DatePicker>
                 <TextBlock Grid.Column="0" Grid.Row="4" Padding="5" VerticalAlignment="Center" HorizontalAlignment="Right">Salari:</TextBlock>
                 <TextBox x:Name="txbSalari" Grid.Column="1" Grid.Row="4"
-                         Text="{Binding ElementName=pageEmpleat,Path=EmpleatSeleccionat.Salari}"
+                         Text="{Binding ElementName=pageEmpleat,Path=EmpleatSeleccionat.Salari, Mode=TwoWay, Converter={StaticResource ResourceKey=DecimalConverterId}}"
                          ></TextBox>
                 <TextBlock Grid.Column="0" Grid.Row="5" Padding="5" VerticalAlignment="Center" HorizontalAlignment="Right">Comissió:</TextBlock>
                 <TextBox x:Name="txbComissio" Grid.Column="1" Grid.Row="5"
-                         Text="{Binding ElementName=pageEmpleat,Path=EmpleatSeleccionat.Comissio}"
+                         Text="{Binding ElementName=pageEmpleat,Path=EmpleatSeleccionat.Comissio, Mode=TwoWay, Converter={StaticResource ResourceKey=DecimalConverterId}}"
                          ></TextBox>
                 <TextBlock Grid.Column="0" Grid.Row="6" Padding="5" VerticalAlignment="Center" HorizontalAlignment="Right">Departament:</TextBlock>
                 <ComboBox x:Name="cboDepartament" Grid.Column="1" Grid.Row="6" 
-                          SelectedValue="{Binding ElementName=pageEmpleat, Path=EmpleatSeleccionat.Dept_no}"
+                          SelectedValue="{Binding ElementName=pageEmpleat, Path=EmpleatSeleccionat.Dept_no, Mode=TwoWay}"
                           HorizontalAlignment="Stretch"></ComboBox>
-                
-                <!--
 
-                            DBUtils.afegirParametre(comanda, "p_comissio", emp.comissio, DbType.Decimal);
-                            DBUtils.afegirParametre(comanda, "p_dept_no", emp.dept_no, DbType.Int32);
+                <Grid Grid.Row="7" Grid.ColumnSpan="2" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Button x:Name="btnEsborrar" Grid.Column="0" Click="btnEsborrar_Click">Esborrar</Button>
+                    <Button x:Name="btnAfegir"   Grid.Column="1" Click="btnAfegir_Click">Nou</Button>
+                    <Button x:Name="btnCancel"   Grid.Column="3" Click="btnCancel_Click">Cancel</Button>
+                    <Button x:Name="btnDesar"    Grid.Column="4" Click="btnDesar_Click">Desar</Button>
+                </Grid>
 
-                -->
             </Grid>
         </Grid>
-        <Button x:Name="btnEsborrar"  Click="btnEsborrar_Click">Esborrar</Button>
-        <Button x:Name="btnAfegir"  Click="btnAfegir_Click">Afegir</Button>
+
     </StackPanel>
 </Page>
