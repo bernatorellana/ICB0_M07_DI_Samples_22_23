@@ -33,7 +33,7 @@ namespace AppAmbBD
             this.InitializeComponent();
         }
 
-
+        private long rowCount;
 
         public EmpDB EmpleatSeleccionat
         {
@@ -48,11 +48,26 @@ namespace AppAmbBD
 
 
 
+
+        public int Page
+        {
+            get { return (int)GetValue(PageProperty); }
+            set { SetValue(PageProperty, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for Page.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty PageProperty =
+            DependencyProperty.Register("Page", typeof(int), typeof(MainPage), new PropertyMetadata(0));
+
+
+
+
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
 
 
-            
+            rowCount = EmpDB.count();
+            //rowCount / DBUtils.ROWS_PER_PAGE
 
            /* EmpDB empleat = new EmpDB(123, "Paco2", "PROGRAMADOR", null, DateTime.Now, 1234.2M, 12.2M, 10);
             if (EmpDB.insert(empleat))
@@ -96,7 +111,7 @@ namespace AppAmbBD
             }
             catch (Exception ex) { }
 
-            mEmpleats = EmpDB.getEmpleats(txbFiltreNom.Text, dataFiltre);
+            mEmpleats = EmpDB.getEmpleats(txbFiltreNom.Text, dataFiltre, Page);
             grdDades.ItemsSource = mEmpleats;
         }
 
@@ -162,6 +177,13 @@ namespace AppAmbBD
                     cerca();
                 }
 
+            } else // tenim un element seleccionat i per tant fem update
+             {
+                bool udpateCorrecte = EmpDB.update(EmpleatSeleccionat);
+                if (udpateCorrecte)
+                {
+                    cerca();
+                }
             }
         }
 
@@ -173,6 +195,12 @@ namespace AppAmbBD
         private void btnCancel_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void btnForward_Click(object sender, RoutedEventArgs e)
+        {
+            Page++;
+            cerca();
         }
     }
 }

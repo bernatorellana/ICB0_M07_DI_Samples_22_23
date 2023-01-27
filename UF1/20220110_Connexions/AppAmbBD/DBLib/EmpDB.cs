@@ -15,6 +15,7 @@ namespace DBLib
         private String ofici;
         private int? cap;
         private DateTime? data_alta;
+        private DateTimeOffset? data_alta_offset;
         private decimal? salari;
         private decimal? comissio;
         private int dept_no;
@@ -48,19 +49,30 @@ namespace DBLib
         public string Cognom { get => cognom; set => cognom = value; }
         public string Ofici { get => ofici; set => ofici = value; }
         public int? Cap { get => cap; set => cap = value; }
-        public DateTime? Data_alta { get => data_alta; set => data_alta = value; }
+
+        public DateTime? Data_alta
+        {
+            get => data_alta; 
+            set
+            {
+                data_alta = value;
+                if (data_alta != null)
+                {
+                    data_alta_offset = new DateTimeOffset(data_alta.Value);
+                }
+            }
+        }
 
         public DateTimeOffset? Data_alta_offset
         {
-            get
+            get => data_alta_offset; 
+            set
             {
-                if (data_alta != null)
-                {
-                    return new DateTimeOffset(data_alta.Value);
-                }
-                else return null;
+                data_alta_offset = value;
+                data_alta = data_alta_offset.Value.DateTime;
             }
         }
+
         public decimal? Salari { get => salari; set => salari = value; }
         public decimal? Comissio { get => comissio; set => comissio = value; }
         public int Dept_no { get => dept_no; set => dept_no = value; }
@@ -145,7 +157,8 @@ namespace DBLib
 
         public static ObservableCollection<EmpDB> getEmpleats(
             String filtreCognom,
-            DateTime? filterData) 
+            DateTime? filterData,
+            int pagina=0, int rowsPerPage=DBUtils.ROWS_PER_PAGE) 
         {
             ObservableCollection<EmpDB> empleats = new ObservableCollection<EmpDB>();
             using(MySQLDbContext context = new MySQLDbContext())
@@ -155,9 +168,10 @@ namespace DBLib
                     connection.Open();
                     using( var comanda = connection.CreateCommand())
                     {
-                        comanda.CommandText = @"select * from emp 
+                        comanda.CommandText = $@"select * from emp 
                                                 where (@p_nom='' or cognom like @p_nom ) and
-                                                      (@p_data is null or data_alta>= @p_data) ";
+                                                      (@p_data is null or data_alta>= @p_data)
+                                                limit {rowsPerPage} offset {pagina*rowsPerPage} "; // fila de paginació
                         DBUtils.afegirParametre(comanda, "p_nom", "%"+filtreCognom+"%", DbType.String);
                         DBUtils.afegirParametre(comanda, "p_data", filterData, DbType.DateTime);
 
@@ -245,6 +259,61 @@ namespace DBLib
             return false;
         }
 
+
+        public static long count()
+        {
+            return DBUtils.count("emp");
+        }
+
+
+        public static Boolean update(EmpDB emp)
+        {
+            try
+            {
+                using (MySQLDbContext context = new MySQLDbContext())
+                {
+                    using (var connection = context.Database.GetDbConnection())
+                    {
+
+                        connection.Open();
+                        DbTransaction transaccio = connection.BeginTransaction();
+
+                        using (var comanda = connection.CreateCommand())
+                        {
+           
+                            comanda.Transaction = transaccio;
+       
+                            comanda.CommandText =
+                    @"update emp set  cognom=@p_cognom, ofici= @p_ofici, cap=@p_cap, 
+                    data_alta=@p_data_alta, salari=@p_salari, comissio=@p_comissio, dept_no=@p_dept_no
+                    where emp_no =  @p_emp_no ";
+                            DBUtils.afegirParametre(comanda, "p_emp_no", emp.Emp_no, DbType.Decimal);
+                            DBUtils.afegirParametre(comanda, "p_cognom", emp.cognom, DbType.String);
+                            DBUtils.afegirParametre(comanda, "p_ofici", emp.ofici, DbType.String);
+                            DBUtils.afegirParametre(comanda, "p_cap", emp.cap, DbType.Decimal);
+                            DBUtils.afegirParametre(comanda, "p_data_alta", emp.data_alta, DbType.DateTime);
+                            DBUtils.afegirParametre(comanda, "p_salari", emp.salari, DbType.Decimal);
+                            DBUtils.afegirParametre(comanda, "p_comissio", emp.comissio, DbType.Decimal);
+                            DBUtils.afegirParametre(comanda, "p_dept_no", emp.dept_no, DbType.Int32);
+
+                            Int32 filesActualitzades = comanda.ExecuteNonQuery();
+
+                            if (filesActualitzades == 1)
+                            {
+                                transaccio.Commit();
+                                return true;
+                            }
+                            throw new Exception("Something weird happened");
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
+            return false;
+        }
 
 
 

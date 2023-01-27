@@ -120,6 +120,20 @@
 
             </Grid>
         </Grid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" x:Name="btnFirst"  FontFamily="Segoe MDL2 Assets">&#xE892;</Button>
+            <Button Grid.Column="1" x:Name="btnBack" FontFamily="Segoe MDL2 Assets">&#xE72B;</Button>
+            <TextBox x:Name="txtPage" Text="{Binding ElementName=pageEmpleat, Path=Page}"></TextBox>
+            <Button Grid.Column="3" x:Name="btnForward" Click="btnForward_Click" FontFamily="Segoe MDL2 Assets">&#xE72A;</Button>
+            <Button Grid.Column="4" x:Name="btnLast" FontFamily="Segoe MDL2 Assets">&#xE893;</Button>
+        </Grid>
 
     </StackPanel>
 </Page>

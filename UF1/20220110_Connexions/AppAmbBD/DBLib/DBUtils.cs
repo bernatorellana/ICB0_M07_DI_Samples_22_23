@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Common;
@@ -8,6 +9,8 @@ namespace DBLib
 {
     class DBUtils
     {
+        public const int ROWS_PER_PAGE = 5;
+
         public static void afegirParametre(
             DbCommand comanda,
             String nomParametre,
@@ -71,5 +74,30 @@ namespace DBLib
             else return null;
         }
 
-    }
-}
+        public static long count(String nomTaula)
+        {
+            try
+            {
+                using (MySQLDbContext context = new MySQLDbContext())
+                {
+                    using (var connection = context.Database.GetDbConnection())
+                    {
+                        connection.Open();
+                        using (var comanda = connection.CreateCommand())
+                        {
+                            comanda.CommandText = "select count(1) from " + nomTaula;
+                            return (long)comanda.ExecuteScalar();
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
+            return 0;
+        }
+    } // end class
+
+
+}// end namespace
