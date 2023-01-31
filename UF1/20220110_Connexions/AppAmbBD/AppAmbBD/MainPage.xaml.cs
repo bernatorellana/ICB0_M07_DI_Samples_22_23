@@ -27,13 +27,15 @@ namespace AppAmbBD
     {
 
         private ObservableCollection<EmpDB> mEmpleats;
+        private int pageCount;
+
 
         public MainPage()
         {
             this.InitializeComponent();
         }
 
-        private long rowCount;
+        
 
         public EmpDB EmpleatSeleccionat
         {
@@ -46,13 +48,25 @@ namespace AppAmbBD
             DependencyProperty.Register("EmpleatSeleccionat", typeof(EmpDB), typeof(MainPage), new PropertyMetadata(null));
 
 
+        private long rowCount;
 
+        public long RowCount
+        {
+            get { return rowCount; }
+            set { 
+                rowCount = value;
+                pageCount = (int) Math.Ceiling((decimal)rowCount / DBUtils.ROWS_PER_PAGE);
+            }
+        }
 
 
         public int Page
         {
             get { return (int)GetValue(PageProperty); }
-            set { SetValue(PageProperty, value); }
+            set { 
+                SetValue(PageProperty, value);
+                cerca();
+            }
         }
 
         // Using a DependencyProperty as the backing store for Page.  This enables animation, styling, binding, etc...
@@ -65,16 +79,10 @@ namespace AppAmbBD
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
 
+            RowCount = EmpDB.count();
 
-            rowCount = EmpDB.count();
-            //rowCount / DBUtils.ROWS_PER_PAGE
+            EmpleatSeleccionat = new EmpDB(0, "", "", null, null, null, null, -1);
 
-           /* EmpDB empleat = new EmpDB(123, "Paco2", "PROGRAMADOR", null, DateTime.Now, 1234.2M, 12.2M, 10);
-            if (EmpDB.insert(empleat))
-            {
-                int i = 0;
-            }
-            */
             cerca();
 
             ObservableCollection<EmpDB> totsElsEmpleats = EmpDB.getEmpleats("", null);
@@ -135,6 +143,7 @@ namespace AppAmbBD
                 {
                     //mEmpleats.Remove(empleat);
                     mEmpleats.RemoveAt(grdDades.SelectedIndex);
+                    RowCount--;
                     //cerca();
                 }
                 else
@@ -174,6 +183,7 @@ namespace AppAmbBD
                 bool insercioCorrecta = EmpDB.insert(EmpleatSeleccionat);
                 if (insercioCorrecta)
                 {
+                    RowCount++;
                     cerca();
                 }
 
@@ -199,8 +209,33 @@ namespace AppAmbBD
 
         private void btnForward_Click(object sender, RoutedEventArgs e)
         {
-            Page++;
-            cerca();
+            incPagina(+1);
+        }
+        private void btnBack_Click(object sender, RoutedEventArgs e)
+        {
+            incPagina(-1);
+        }
+        private void incPagina(int inc)
+        {
+            int p = Page +  inc;
+            if(p<0)
+            {
+                p = pageCount - 1;
+            } else if(p==pageCount)
+            {
+                p = 0;
+            }
+            Page = p;
+                    
+        }
+        private void btnLast_Click(object sender, RoutedEventArgs e)
+        {
+            Page = pageCount - 1;
+   
+        }
+        private void btnFirst_Click(object sender, RoutedEventArgs e)
+        {
+            Page = 0;
         }
     }
 }

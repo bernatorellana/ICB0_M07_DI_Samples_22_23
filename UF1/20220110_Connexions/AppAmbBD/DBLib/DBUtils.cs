@@ -7,7 +7,7 @@ using System.Text;
 
 namespace DBLib
 {
-    class DBUtils
+    public class DBUtils
     {
         public const int ROWS_PER_PAGE = 5;
 
