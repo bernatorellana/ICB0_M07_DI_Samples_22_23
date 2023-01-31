@@ -3,7 +3,7 @@ using DBLib;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-
+using System.ComponentModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -26,7 +26,7 @@ namespace AppAmbBD
     /// <summary>
     /// Página vacía que se puede usar de forma independiente o a la que se puede navegar dentro de un objeto Frame.
     /// </summary>
-    public sealed partial class MainPage : Page
+    public sealed partial class MainPage : Page, INotifyPropertyChanged
     {
 
         private ObservableCollection<EmpDB> mEmpleats;
@@ -76,8 +76,21 @@ namespace AppAmbBD
         public static readonly DependencyProperty PageProperty =
             DependencyProperty.Register("Page", typeof(int), typeof(MainPage), new PropertyMetadata(0));
 
+        public event PropertyChangedEventHandler PropertyChanged;
 
+        public bool NoEsLaPrimeraPagina { get
+            {
+                return Page > 0;
+            }
+        }
 
+        public bool NoEsLaUltimaPagina
+        {
+            get
+            {
+                return Page < pageCount-1;
+            }
+        }
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
@@ -201,6 +214,8 @@ namespace AppAmbBD
                 }
             }
         }
+
+
 
         private void btnAfegir_Click_1(object sender, RoutedEventArgs e)
         {
