@@ -1,12 +1,15 @@
-﻿using DBLib;
+﻿using AppAmbBD.viewmodel;
+using DBLib;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI;
 using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -37,15 +40,15 @@ namespace AppAmbBD
 
         
 
-        public EmpDB EmpleatSeleccionat
+        public EmpViewModel EmpleatSeleccionat
         {
-            get { return (EmpDB)GetValue(EmpleatSeleccionatProperty); }
+            get { return (EmpViewModel)GetValue(EmpleatSeleccionatProperty); }
             set { SetValue(EmpleatSeleccionatProperty, value); }
         }
 
         // Using a DependencyProperty as the backing store for EmpleatSeleccionat.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty EmpleatSeleccionatProperty =
-            DependencyProperty.Register("EmpleatSeleccionat", typeof(EmpDB), typeof(MainPage), new PropertyMetadata(null));
+            DependencyProperty.Register("EmpleatSeleccionat", typeof(EmpViewModel), typeof(MainPage), new PropertyMetadata(null));
 
 
         private long rowCount;
@@ -81,7 +84,7 @@ namespace AppAmbBD
 
             RowCount = EmpDB.count();
 
-            EmpleatSeleccionat = new EmpDB(0, "", "", null, null, null, null, -1);
+            EmpleatSeleccionat = new EmpViewModel(0, "", "", null, null, null, null, -1);
 
             cerca();
 
@@ -161,7 +164,7 @@ namespace AppAmbBD
             if (empleat != null) {                
                 btnEsborrar.IsEnabled = EmpDB.pucEsborrar(empleat);
 
-                EmpleatSeleccionat =  new EmpDB(empleat);
+                EmpleatSeleccionat =  new EmpViewModel(empleat);
             }
             //--------------------------------
            
@@ -171,7 +174,7 @@ namespace AppAmbBD
 
         private void btnAfegir_Click(object sender, RoutedEventArgs e)
         {
-            EmpleatSeleccionat = new EmpDB(0, "", "", null, null, null, null, -1);
+            EmpleatSeleccionat = new EmpViewModel(0, "", "", null, null, null, null, -1);
             grdDades.SelectedIndex = -1;
         }
 
@@ -180,7 +183,9 @@ namespace AppAmbBD
             if(grdDades.SelectedIndex == -1)
             {
                 //new EmpDB(0, txbCognom.Text, "", null, null, null, null, -1);
-                bool insercioCorrecta = EmpDB.insert(EmpleatSeleccionat);
+
+
+                bool insercioCorrecta = EmpDB.insert(EmpleatSeleccionat.toEmpDB());
                 if (insercioCorrecta)
                 {
                     RowCount++;
@@ -189,7 +194,7 @@ namespace AppAmbBD
 
             } else // tenim un element seleccionat i per tant fem update
              {
-                bool udpateCorrecte = EmpDB.update(EmpleatSeleccionat);
+                bool udpateCorrecte = EmpDB.update(EmpleatSeleccionat.toEmpDB());
                 if (udpateCorrecte)
                 {
                     cerca();

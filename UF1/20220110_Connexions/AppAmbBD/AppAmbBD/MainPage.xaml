@@ -63,6 +63,7 @@
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"></ColumnDefinition>
                     <ColumnDefinition Width="2*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
                     <RowDefinition></RowDefinition>
@@ -76,8 +77,10 @@
                 </Grid.RowDefinitions>
                 <TextBlock Grid.Column="0" Grid.Row="0" Padding="5" VerticalAlignment="Center" HorizontalAlignment="Right">Cognom:</TextBlock>
                 <TextBox x:Name="txbCognom" Grid.Column="1" Grid.Row="0"
-                         Text="{Binding ElementName=pageEmpleat,Path=EmpleatSeleccionat.Cognom, Mode=TwoWay}"
+                         Background="{Binding ElementName=pageEmpleat,Path=EmpleatSeleccionat.CognomBackground}"
+                         Text="{Binding ElementName=pageEmpleat,Path=EmpleatSeleccionat.Cognom, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
                          ></TextBox>
+                <TextBlock Grid.Column="2" FontSize="12" MaxLines="2" TextWrapping="Wrap" Foreground="Red" Grid.Row="0" Text="{Binding ElementName=pageEmpleat,Path=EmpleatSeleccionat.CognomError }"></TextBlock>
                 <TextBlock Grid.Column="0" Grid.Row="1" Padding="5" VerticalAlignment="Center" HorizontalAlignment="Right">Ofici:</TextBlock>
                 <TextBox x:Name="txbOfici" Grid.Column="1" Grid.Row="1"
                          Text="{Binding ElementName=pageEmpleat,Path=EmpleatSeleccionat.Ofici, Mode=TwoWay}"

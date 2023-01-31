@@ -56,22 +56,9 @@ namespace DBLib
             set
             {
                 data_alta = value;
-                if (data_alta != null)
-                {
-                    data_alta_offset = new DateTimeOffset(data_alta.Value);
-                }
             }
         }
 
-        public DateTimeOffset? Data_alta_offset
-        {
-            get => data_alta_offset; 
-            set
-            {
-                data_alta_offset = value;
-                data_alta = data_alta_offset.Value.DateTime;
-            }
-        }
 
         public decimal? Salari { get => salari; set => salari = value; }
         public decimal? Comissio { get => comissio; set => comissio = value; }
