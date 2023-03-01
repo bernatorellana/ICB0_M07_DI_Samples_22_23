@@ -19,8 +19,12 @@ namespace DemoTestingUnitari.Model
         /// <returns>el preu de l'entrada</returns>
         public static decimal getPreu(int edat)
         {
-
-            if(edat>65)
+ 
+            if( edat<3 || edat>120)
+            {
+                throw new Exception("Edat incorrecta");
+            }
+            else if (edat>=65)
             {
                 return 0.00m;
             } else if(edat < 18)
