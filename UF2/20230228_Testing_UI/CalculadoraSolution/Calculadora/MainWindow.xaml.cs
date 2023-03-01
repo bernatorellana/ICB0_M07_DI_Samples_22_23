@@ -24,5 +24,10 @@ namespace Calculadora
         {
             InitializeComponent();
         }
+
+        private void btnCalcula_Click(object sender, RoutedEventArgs e)
+        {
+            txtResult.Text = ""+(int.Parse(txtOp1.Text) + int.Parse(txtOp2.Text));
+        }
     }
 }

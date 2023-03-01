@@ -16,6 +16,6 @@
         <Label VerticalAlignment="Center">=</Label>
         <TextBox  x:Name="txtResult" IsReadOnly="True"
             Width="100" Text="0" FontSize="30" Background="Black" Foreground="Lime"></TextBox>
-        <Button x:Name="btnCalcula" Margin="50,0,0,0">Calcula</Button>
+        <Button x:Name="btnCalcula" Margin="50,0,0,0" Click="btnCalcula_Click">Calcula</Button>
     </StackPanel>
 </Window>
