@@ -1,0 +1,47 @@
+### YamlMime:XRefMap
+sorted: true
+references:
+- uid: Calculadora
+  name: Calculadora
+  href: api/Calculadora.html
+  commentId: N:Calculadora
+  fullName: Calculadora
+  nameWithType: Calculadora
+- uid: Calculadora.App
+  name: App
+  href: api/Calculadora.App.html
+  commentId: T:Calculadora.App
+  fullName: Calculadora.App
+  nameWithType: App
+- uid: Calculadora.MainWindow
+  name: MainWindow
+  href: api/Calculadora.MainWindow.html
+  commentId: T:Calculadora.MainWindow
+  fullName: Calculadora.MainWindow
+  nameWithType: MainWindow
+- uid: Calculadora.MainWindow.#ctor
+  name: MainWindow()
+  href: api/Calculadora.MainWindow.html#Calculadora_MainWindow__ctor
+  commentId: M:Calculadora.MainWindow.#ctor
+  fullName: Calculadora.MainWindow.MainWindow()
+  nameWithType: MainWindow.MainWindow()
+- uid: Calculadora.MainWindow.#ctor*
+  name: MainWindow
+  href: api/Calculadora.MainWindow.html#Calculadora_MainWindow__ctor_
+  commentId: Overload:Calculadora.MainWindow.#ctor
+  isSpec: "True"
+  fullName: Calculadora.MainWindow.MainWindow
+  nameWithType: MainWindow.MainWindow
+- uid: Calculadora.MainWindow.suma(System.Int32,System.Int32)
+  name: suma(Int32, Int32)
+  href: api/Calculadora.MainWindow.html#Calculadora_MainWindow_suma_System_Int32_System_Int32_
+  commentId: M:Calculadora.MainWindow.suma(System.Int32,System.Int32)
+  fullName: Calculadora.MainWindow.suma(System.Int32, System.Int32)
+  nameWithType: MainWindow.suma(Int32, Int32)
+- uid: Calculadora.MainWindow.suma*
+  name: suma
+  href: api/Calculadora.MainWindow.html#Calculadora_MainWindow_suma_
+  commentId: Overload:Calculadora.MainWindow.suma
+  isSpec: "True"
+  fullName: Calculadora.MainWindow.suma
+  nameWithType: MainWindow.suma

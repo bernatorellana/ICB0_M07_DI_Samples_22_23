@@ -1,0 +1,174 @@
+{
+  "homepages": [],
+  "source_base_path": "E:/Docencia/Material_Moduls/M7_DI/repoGit/22_23/ICB0_M07_DI_Samples_22_23/UF2/20230228_Testing_UI/CalculadoraSolution/Calculadora",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "BjCoe/KjiNDa0BZa3gXskLcnk6qGDkTe9Z/FhgFhpBc="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/intro.html",
+          "hash": "Iv9Z+Jh8k2c4py39UOj7UWO4X3fp6AlAWnKtibqLvq8="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/setup.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/setup.html",
+          "hash": "iv+YqIQA/4FFD3TNG71FJnjFpNdAwBt/LWmIb8d16dg="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/toc.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/toc.html",
+          "hash": "cS1Y1PfUMG+Hu7m2/5eJlC89f1CbzFoE3/SeZJMeQOg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "8iNIc1jjzq/S8r89rpQ1lT8cu+qvwfA4e5m4oVwFYPY="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Calculadora.App.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Calculadora.App.html",
+          "hash": "P0YGoWuP8CY5gr50jsG6rVyetplUkIHsL97ru4WjaqE="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Calculadora.MainWindow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Calculadora.MainWindow.html",
+          "hash": "eeRx/1rvAh7/ygOXlTR6TDKcPOMtPVl+tOXmignE9o8="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Calculadora.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Calculadora.html",
+          "hash": "nKroGe8N1bscBsdiwgyhww2SG0VDmF2MLg0Fk1ufu7s="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "obj/api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "cm0proZwgtDY12nBKshVKuqM2cC4LtTt7ploqdObf6o="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "Oa9PuD4E1hvZnCkVjUgzNBX6S00Zo5YilamTERTZo54="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": true,
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 4,
+          "skipped_file_count": 4
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 3,
+          "skipped_file_count": 3
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": true,
+        "details": "Can support incremental post processing.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
