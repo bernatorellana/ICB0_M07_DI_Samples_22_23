@@ -76,5 +76,10 @@ namespace Calculadora
         {
             return a + b;
         }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            int c = CalculadoraLib.Calculadora.suma(2, 2);
+        }
     }
 }

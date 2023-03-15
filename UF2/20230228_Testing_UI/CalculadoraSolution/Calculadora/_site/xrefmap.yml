@@ -45,3 +45,21 @@ references:
   isSpec: "True"
   fullName: Calculadora.MainWindow.suma
   nameWithType: MainWindow.suma
+- uid: Calculadora.Model
+  name: Calculadora.Model
+  href: api/Calculadora.Model.html
+  commentId: N:Calculadora.Model
+  fullName: Calculadora.Model
+  nameWithType: Calculadora.Model
+- uid: Calculadora.Model.Empleat
+  name: Empleat
+  href: api/Calculadora.Model.Empleat.html
+  commentId: T:Calculadora.Model.Empleat
+  fullName: Calculadora.Model.Empleat
+  nameWithType: Empleat
+- uid: Calculadora.Model.Persona
+  name: Persona
+  href: api/Calculadora.Model.Persona.html
+  commentId: T:Calculadora.Model.Persona
+  fullName: Calculadora.Model.Persona
+  nameWithType: Persona

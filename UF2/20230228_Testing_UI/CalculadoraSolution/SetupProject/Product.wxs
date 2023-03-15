@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+	<Product Id="*" 
+			 Name="CalculadoraUltimate" Language="1033" Version="1.0.0.0" Manufacturer="iesmila.org" 
+			 UpgradeCode="dc62a3aa-0e24-44b5-8c32-2123cb3df8a7">
+		<Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
+
+		<MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
+		<MediaTemplate />
+
+		<Feature Id="ProductFeature" Title="SetupProject" Level="1">
+			<ComponentGroupRef Id="ProductComponents" />
+			<ComponentGroupRef Id="CG_SHORCUT_MI" />
+			<ComponentGroupRef Id="CG_SHORTCUT_DESK" />
+		</Feature>
+
+		<UIRef Id="WixUI_Mondo"/>
+		<UIRef Id="WixUI_ErrorProgressText"/>
+		
+		<Property Id="WIXUI_INSTALLDIR"
+				  Value="INSTALLFOLDER"></Property>
+	
+	</Product>
+
+	<Fragment>
+		<Directory Id="TARGETDIR" Name="SourceDir">
+			<Directory Id="ProgramFilesFolder">
+				<Directory Id="INSTALLFOLDER" Name="Calculadora" />
+			</Directory>
+			<Directory Id="DesktopFolder">
+			</Directory>
+		
+	<Directory Id="ProgramMenuFolder">
+		<Directory Id="DIR_MENU_INICI"
+				   Name="CalculadoraUltimate"
+				   ></Directory>
+	</Directory>
+	
+		</Directory>
+	</Fragment>
+
+	<Fragment>
+		<ComponentGroup Id="ProductComponents" Directory="INSTALLFOLDER">
+			<Component Id="CMP_EXECUTABLE"
+					   Guid="{aad00c61-396b-4edd-8955-460aba8703c1}"
+					   >
+				<File Id="FILE_EXE"
+					  Source="$(var.Calculadora.TargetDir)Calculadora.exe"
+				KeyPath="yes"></File>		   
+			</Component>
+			<Component Id="CMP_DLL"
+					   Guid="{e999c736-0668-4e8e-a376-f36165f5e85f}"
+					   >
+				<File Id="FILE_DLL"
+					  Source="$(var.Calculadora.TargetDir)CalculadoraLib.dll"
+				KeyPath="yes"></File>		   
+			</Component>
+		</ComponentGroup>
+	
+		<!-- grup de components de l'accés directe al menú d'inici -->
+		<ComponentGroup Id="CG_SHORCUT_MI" Directory="DIR_MENU_INICI">
+			<Component Id="CMP_SHORCUT_MI" Guid="{b0fc33d5-eddf-47d6-8821-ca95c5ae7ea1}">
+				<Shortcut Id="SHC_MI_EXE"
+						 Name="CalculadoraUltimate"
+						 Description="Calculadora científica"
+						 Target="[INSTALLFOLDER]Calculadora.exe"
+						 />
+				<Shortcut Id="SHC_MI_UNINSTALL"
+					 Name="Desintalar Calculadora"
+					 Description="Desintalar Calculadora científica"
+					 Target="[System64Folder]msiexec.exe"
+						  Arguments="/x [ProductCode]"
+						 />
+				<RemoveFolder Id="RemoveMyShortcutsDir" On="uninstall"/>
+
+				<RegistryValue Root="HKCU"
+					Key="Software\IESMila\CalculadoraUltimate"
+							   Name="installed"
+							   Type="integer"
+							   Value="1"
+							   KeyPath="yes"/>
+			</Component>
+		</ComponentGroup>
+
+
+
+		<ComponentGroup Id="CG_SHORTCUT_DESK" Directory="DesktopFolder">
+			<Component Id="CMP_SHORCUT_DESK" Guid="{394d3ceb-95d7-49b1-9808-150fb38a98b9}">
+				<Shortcut Id="SHC_DESK_EXE"
+						 Name="CalculadoraUltimate"
+						 Description="Calculadora científica"
+						 Target="[INSTALLFOLDER]Calculadora.exe"
+						 />
+			
+				<RegistryValue Root="HKCU"
+					Key="Software\IESMila\CalculadoraUltimate"
+							   Name="installedDesktop"
+							   Type="integer"
+							   Value="1"
+							   KeyPath="yes"/>
+			</Component>
+			
+		</ComponentGroup>
+
+	</Fragment>
+</Wix>
