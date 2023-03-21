@@ -12,25 +12,52 @@
 			<ComponentGroupRef Id="ProductComponents" />
 			<ComponentGroupRef Id="CG_SHORCUT_MI" />
 			<ComponentGroupRef Id="CG_SHORTCUT_DESK" />
+			
+		</Feature>
+		<Feature Id="DocFeature" Title="Documentació del programa" Level="2">
+			<ComponentGroupRef Id="CPG_DOCS" />
 		</Feature>
 
-		<UIRef Id="WixUI_Mondo"/>
-		<UIRef Id="WixUI_ErrorProgressText"/>
-		
+		<UI>
+			<UIRef Id="WixUI_Mondo"/>
+			<UIRef Id="WixUI_ErrorProgressText"/>
+			<Publish Dialog="ExitDialog"
+                     Control="Finish"
+                     Event="DoAction"
+                     Value="LaunchApplication">
+				WIXUI_EXITDIALOGOPTIONALCHECKBOX = 1 and NOT Installed
+			</Publish>
+		</UI>
 		<Property Id="WIXUI_INSTALLDIR"
 				  Value="INSTALLFOLDER"></Property>
-	
+
+		<!-- ============================= CUSTOM ACTIONS =======================================-->
+		<!-- ============================= CUSTOM ACTION 1: Engegar aplicació ===================-->
+		<!-- mostrar checkbox "d'engegar ara ?"-->
+		<Property Id="WIXUI_EXITDIALOGOPTIONALCHECKBOXTEXT"
+                  Value="Vols engegar l'aplicació ara?"></Property>
+
+		<Property Id="WixShellExecTarget"
+                  Value="[INSTALLFOLDER]Calculadora.exe"></Property>
+		<CustomAction Id="LaunchApplication" BinaryKey="WixCA"
+                      DllEntry="WixShellExec"
+                      Impersonate="yes"></CustomAction>
+
+		<WixVariable Id="WixUILicenseRtf" Value="llicencia.rtf"></WixVariable>
 	</Product>
 
 	<Fragment>
 		<Directory Id="TARGETDIR" Name="SourceDir">
 			<Directory Id="ProgramFilesFolder">
-				<Directory Id="INSTALLFOLDER" Name="Calculadora" />
+				<Directory Id="INSTALLFOLDER" Name="Calculadora" >
+					<Directory Id="DOCFOLDER" Name="Documentacio" >
+					</Directory>
+				</Directory>
 			</Directory>
 			<Directory Id="DesktopFolder">
 			</Directory>
 		
-	<Directory Id="ProgramMenuFolder">
+		<Directory Id="ProgramMenuFolder">
 		<Directory Id="DIR_MENU_INICI"
 				   Name="CalculadoraUltimate"
 				   ></Directory>
@@ -52,6 +79,7 @@
 					   Guid="{e999c736-0668-4e8e-a376-f36165f5e85f}"
 					   >
 				<File Id="FILE_DLL"
+					  Assembly=".net"
 					  Source="$(var.Calculadora.TargetDir)CalculadoraLib.dll"
 				KeyPath="yes"></File>		   
 			</Component>
@@ -66,7 +94,7 @@
 						 Target="[INSTALLFOLDER]Calculadora.exe"
 						 />
 				<Shortcut Id="SHC_MI_UNINSTALL"
-					 Name="Desintalar Calculadora"
+					 Name="Desintalar CalculadoraUltimate"
 					 Description="Desintalar Calculadora científica"
 					 Target="[System64Folder]msiexec.exe"
 						  Arguments="/x [ProductCode]"

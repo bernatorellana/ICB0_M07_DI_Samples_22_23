@@ -1,0 +1,707 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+    <Fragment>
+        <DirectoryRef Id="DOCFOLDER">
+            <Directory Id="dir099EE867361442AB6476EA9C228D3C83" Name="index_fitxers" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <ComponentGroup Id="CPG_DOCS">
+            <Component Id="cmp1A4E5410613E1624F3692BE3E8A5843B" Directory="DOCFOLDER" Guid="A5A20CE7-A534-4A5C-AC87-0E95C6B54CAE">
+                <File Id="fil31080D5328528181E5A838815DE3DEB4" KeyPath="yes" Source="$(var.PathDocumentacio)\index.html" />
+            </Component>
+            <Component Id="cmp7DC665CB1C62A7A585C074F4563813E3" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="CA12F001-D806-459E-B4A0-37143061651E">
+                <File Id="fil576A86C5DDD107C8FCCE1E7F65106DFE" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\20230221_090650.jpg" />
+            </Component>
+            <Component Id="cmp58AC2D5DFD5780945AAEDD1BFB96048C" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="7144830A-21B2-4FC4-AC6A-DE07FFE1CEFB">
+                <File Id="filBD22D4C8613262CA2C75F8D7E570D6E9" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\2_Boto_Acredita.jpg" />
+            </Component>
+            <Component Id="cmp5ED5772738E4690D34FCCCDD3FFEBB1A" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="66EB7563-0F59-40C1-AE59-B967390DDB2F">
+                <File Id="fil2971A29E1DE3B32A9467D1363852BF6C" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\62cd937b61c1e300175a3edc.html" />
+            </Component>
+            <Component Id="cmp42A195CD5A1C5DC929371DF166CF46D1" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="02A25AA8-12DB-4F9E-8CB2-B809441370CB">
+                <File Id="fil9E6E7E0A8909E3509F1AC67B0DE0CD89" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\64075be14b8e5b0013354d02.html" />
+            </Component>
+            <Component Id="cmpD7357FB1C96F2D5EBCE3004CF687B813" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="17DCD3C3-76CD-4BD6-9DB7-8031CAC9CF7D">
+                <File Id="filA79CCD5200FE6615F6259582A8165C6E" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\a.html" />
+            </Component>
+            <Component Id="cmp644100CFC0828CE4E79017929E58AB7A" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="CAC8A743-8F4A-44EA-9E12-67EE1C490A35">
+                <File Id="fil6E9D3A7E59AB27A0319EADCA8210A379" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\a11y.min.js" />
+            </Component>
+            <Component Id="cmp15A16CE2D61EE148326775A7D0F67B2B" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="298A767E-1555-4407-A08C-ED5B564DBD43">
+                <File Id="filA71E3C84CE57DF8806661F01A93AFC76" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\addtoany.min.css" />
+            </Component>
+            <Component Id="cmp982449F4D3B91CB620F23575CCAE2652" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="75E3E717-3ED1-496B-926D-37603299F874">
+                <File Id="filDFD8A78A35986D71983FB2AAA5C85A38" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\addtoany.min.js" />
+            </Component>
+            <Component Id="cmpD0EB9E8A88B304BEC61B71055A044B5A" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="B43BA24E-A34C-4B1E-879F-9D02DE17982A">
+                <File Id="filF8C1165CED6F00F33BD227C1ADAD35F7" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\admin-bar.min.css" />
+            </Component>
+            <Component Id="cmp576898B7DCF1C8B5F9789DE32E9943B9" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="E3F467D7-D93D-4A59-8030-4618BE3986AA">
+                <File Id="fil5F4B2E35621808C4D63C03C8389277F2" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\admin-bar.min.js" />
+            </Component>
+            <Component Id="cmp1C7BD7C17A18AE8303BF297248748A2A" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="5D200998-334A-4B51-9523-FBDE6540A96F">
+                <File Id="fil8F2D4CD91CFE811DCDC4B45F5932FCA1" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\admin-bar.min_002.css" />
+            </Component>
+            <Component Id="cmpF9C69B7C8FC35A68C6E02177E5A6CE09" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="BC6EE8F7-1753-4F14-861E-7A5875DFD005">
+                <File Id="fil5B2ED6247A2AF8DD394467192E935B71" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\agora-functions.js" />
+            </Component>
+            <Component Id="cmp22B93BADAAC72CE4542CF482C7986F33" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="7E38CCCD-594E-4404-98E2-8E2D9CA9B4EA">
+                <File Id="fil4B6AE6CFF1A45E5B4D492D7F91E32B10" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\animate.css" />
+            </Component>
+            <Component Id="cmp7A77185ACC43E4A796FBE8219CED7641" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="37943DBF-CEDA-41A6-84BD-E9DC7C4B8C9E">
+                <File Id="fil1005CC728A4FC50476E412957A1C833E" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\atri-icon.png" />
+            </Component>
+            <Component Id="cmp218EAC7010444320B6A2C30E1319B224" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="64F23AFB-4742-48BD-A29F-F83FBA29BE0C">
+                <File Id="filD441407C94E914DF0C3445E31E772F7E" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\autocomplete.min.js" />
+            </Component>
+            <Component Id="cmp75DACB0263CF7F42D8515436238EAB08" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="538DDCD8-36B6-478B-BB90-36F92996DA15">
+                <File Id="filF18A9DFB24DC04C40A54CDDCDCE3E12F" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\a_002.html" />
+            </Component>
+            <Component Id="cmpBFCCEAC0BCED968CA1C1C866D9CB2095" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="8C3FF902-5B2F-47F3-90BC-9457DB459D7A">
+                <File Id="filCD69A7568021E8A4CC6A2EC055C0C7FF" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\banner_web_centres-300x79.png" />
+            </Component>
+            <Component Id="cmpB033B4C44249598BCCB1170FE091981F" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="AF11EFA8-72B7-4EF3-9C7F-579286AE137B">
+                <File Id="fil1F18DFD76CE77C70A24DA3AE2F52EAD2" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\banner_web_centres-768x202.png" />
+            </Component>
+            <Component Id="cmp2D360377254070FE917D96A33E947A5A" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="09AC91A2-0F9F-4816-A264-85B17B2DF7CE">
+                <File Id="fil7ECCF53CE3867BA3E8269F0B51DA6878" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\banner_web_centres.png" />
+            </Component>
+            <Component Id="cmp1E95312F44978D0D6F1A6478EF1BCBCF" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="890FE4D7-02CC-4CFC-B51D-24472DEA9CE3">
+                <File Id="fil4CB2CB427EA7D61ACE8AAC2BD9C742C9" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\bbpress.min.css" />
+            </Component>
+            <Component Id="cmp02BAD63E2B120B37C4836368EE23C5A9" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="FBBC3476-574C-45E2-BFB4-75B4F864D3D2">
+                <File Id="filBF354EA4BA880711ED1DBC01A72F2426" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\bootstrap-front.css" />
+            </Component>
+            <Component Id="cmp8641E77B9339E4AF52E45FF9B4B67A65" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="A293FCE3-8FDD-4796-936F-757C122A13D7">
+                <File Id="fil00DBF74D36D89396CF4FB9AAD3838586" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\buddypress.min.css" />
+            </Component>
+            <Component Id="cmp0E2CB6425F1E5535A2184AA2D867D03F" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="0C98935B-DAD3-4304-BEB4-22471F7AF239">
+                <File Id="fil7FAD6C15ACDE2B558F74C01F3B64E32D" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\buddypress.min.js" />
+            </Component>
+            <Component Id="cmpF648A6682FE3380017C839520BFD11CB" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="D3640EBC-C0FE-4C42-AA2A-42C7495CDEDC">
+                <File Id="filEAAC486C4B617FC2AAFA042AA570F781" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\c3ef3ed0-1d7a-4ad2-93d0-233179e9267f.jpg" />
+            </Component>
+            <Component Id="cmpEBDC10044E0B66A6AB069AEA29BBF60E" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="D06C422C-95A0-4010-A0AA-FB2755864733">
+                <File Id="filC2CABCA970296D7B3C31B0636B7372BE" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\ca.js" />
+            </Component>
+            <Component Id="cmp2F3512DF0D461FB0B65A936609A5487C" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="F9D1E2D1-171C-4008-BD2E-11B3A609571A">
+                <File Id="filF3023579F48427AB1ECC137FA3A16A71" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\Captura-de-pantalla-2023-03-08-a-les-10.20.20.png" />
+            </Component>
+            <Component Id="cmp91C27D7037F8FDC8D21953155A9AA90A" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="E9386E7D-5339-4BD8-B011-233B33C1992F">
+                <File Id="fil5ACEFC2760A92E86167EC1D5147DD13C" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\Captura-de-pantalla-2023-03-08-a-les-19.03.50.png" />
+            </Component>
+            <Component Id="cmp1FE51379B638157DD7B50A4426D7D8C0" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="05FAD178-25C9-4080-B330-D0D39776FFDE">
+                <File Id="fil960B39BFD2BFFAD60B2FCF574C6D7F60" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\cart-1956097_640-150x150.png" />
+            </Component>
+            <Component Id="cmpD9EA5A63C8840D601F26B12919CB1C82" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="9DD3C048-9C25-44B4-AA9D-467281F70790">
+                <File Id="filCF16776EF0F44246F0316855611E1174" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\cart-1956097_640-300x300.png" />
+            </Component>
+            <Component Id="cmpBEE327E74E935624B2C9BC6F6E475347" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="3A6BB8C4-9849-4638-9F9C-51C9080ED6DB">
+                <File Id="fil9047874DDA5509187FAC2AAABD4236E4" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\cart-1956097_640.png" />
+            </Component>
+            <Component Id="cmp5B2C34559AF14FDEC404A700AFD7D621" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="7F4DF3B8-0051-4E86-9C76-01D292715A49">
+                <File Id="fil66DF594EF993FA0B633695A9DF78D15B" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\common-functions.css" />
+            </Component>
+            <Component Id="cmp74A99E398FCC5896E72004A6FAD0AE8E" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="12291657-BC52-496D-B2BA-1E7C4A444E66">
+                <File Id="fil1894F9D46139D6C940730446787F963A" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\confirm.min.js" />
+            </Component>
+            <Component Id="cmp378930929DFDFAC047F637764B72B56C" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="2BAE2D72-F655-40F5-83F1-B19D13474845">
+                <File Id="fil17F81DEF1D77082EDABDAFE5A6D7E0ED" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\core.26680508.js" />
+            </Component>
+            <Component Id="cmp49E8DB01073B217F9C66FC97F7F5EA36" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="410FE5C3-C708-4BFD-A2CC-32EE966D10C3">
+                <File Id="filCF862DBC7F850B0AB8E6B6A464B09404" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\core.min.js" />
+            </Component>
+            <Component Id="cmp59673C4963DED58E8E222710AEA243E9" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="3074EF0F-7DEB-4060-A839-793183F7E318">
+                <File Id="filA12B419211256D966FFC1C1F9B1807E2" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\css.css" />
+            </Component>
+            <Component Id="cmpAD3F7FB77EF8D44472C6340962104094" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="123BE2CA-3C09-4181-888F-65260D2A30CD">
+                <File Id="filFFF6CBB7D1DE0A43E6F1B4E1F14D924F" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\custom.js" />
+            </Component>
+            <Component Id="cmp4D0C371F11A3AA3F5C3FC7C28D5FEDCF" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="359E4C72-1914-4A0E-87AE-F97AB740E621">
+                <File Id="fil727FE7CD1F987A4760940744CA593A16" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\custom.modernizr.js" />
+            </Component>
+            <Component Id="cmp92037CEDB9E85C4A39A04F3144C8AF9D" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="C0F9EAEC-F5E9-4D9D-9FF1-2E035D894ECE">
+                <File Id="fil3F7BDF3745E76B8FCC04D43E06FB8574" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\dashicons.min.css" />
+            </Component>
+            <Component Id="cmp1A77DE4F78312D4D25643D98517F38B2" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="20793736-639F-4DDE-92B5-DDA554F6CAAF">
+                <File Id="fil4C287A6483E054F6CF924E20F6D025D7" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\default-calendar-grid.min.css" />
+            </Component>
+            <Component Id="cmpB83FED8619661AD28B509E1D1DAB5C87" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="6FAEAB98-0FE6-4C8E-8BC4-76A8FA4BB6FE">
+                <File Id="fil2252FB7DC4FAEE060F1D3CDA763EDA80" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\default-calendar-list.min.css" />
+            </Component>
+            <Component Id="cmp59CCA2832D20E3AD45DBB79F3B9029DD" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="5DEC3AA1-865C-46DC-8A95-88162B4C7B8B">
+                <File Id="fil5B19ED1E7270F6E0B077DC0AF62349A9" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\default-calendar.min.js" />
+            </Component>
+            <Component Id="cmp72DAC10AD8424C480CF4F0BC01CE0CA8" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="1B2D027B-9D31-46C0-97DE-FA0415561E61">
+                <File Id="fil4AD77AEC0EE85E9412DF554473BB5789" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\dom-ready.min.js" />
+            </Component>
+            <Component Id="cmp82542787138413FCFA08F49D32B9BA05" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="6C1D7516-3766-4E51-AD09-8E984B6940EE">
+                <File Id="filA096FE70905268C8D0F5EB57346CD15D" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\dublin.jpeg" />
+            </Component>
+            <Component Id="cmpBAC0439BD7CE1308E71C57A95C2F848B" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="DF13646F-E4A4-4694-82AC-2534344AAE57">
+                <File Id="filFE215E0C14AD53DA55B9BE61DC178B01" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\dynamic-groups.min.css" />
+            </Component>
+            <Component Id="cmp643F36B6B31BAB2394C31B8E6B53E1BF" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="DFA4CAA3-6458-4564-9679-9618855C8F23">
+                <File Id="fil9BEC953CEABB432274CC288FB37134FF" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\dynamic-members.min.css" />
+            </Component>
+            <Component Id="cmpA7440380C2FED82B5556A9784A209222" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="CB542491-750D-420B-B98C-BFCF67B6DAB6">
+                <File Id="filA194CA354F0988FDEAD67D338AFF5578" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\educacio-icon.png" />
+            </Component>
+            <Component Id="cmp2DE38A179144376E4D5BD7F6C511C1D1" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="4C17C459-F074-4E32-8485-1C9307C49F8C">
+                <File Id="filD3E524579B7E54B9CADF270C662DDF9F" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\email-subscribers-public.css" />
+            </Component>
+            <Component Id="cmp27B183A20F3F83A18A85AB56FF10B21B" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="55916DEF-7B90-4EB6-92A1-B93AE279928F">
+                <File Id="filFF0B90A70BF8AC4ED61C495A570C9FAA" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\email-subscribers-public.js" />
+            </Component>
+            <Component Id="cmp73911F3F2B7B23DE459AD8C87845FA7E" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="CCCD3A6D-642C-4178-8DAD-C9DFC480162A">
+                <File Id="fil0950BC7BF6B91D0C4BE65D8ACE984AF5" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\font-awesome.min.css" />
+            </Component>
+            <Component Id="cmp3CBA4F7DC463C336E38F229930FB37D9" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="2C70AB1B-4A02-48BB-BF73-A98956AE1481">
+                <File Id="filFD9BD0BFE74505A26D98C317BA684F86" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\font-awesome.min_002.css" />
+            </Component>
+            <Component Id="cmpFDCA0F93A04007922F6608FB79719021" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="B05998B4-AD8B-407B-8F85-3AAF032AC976">
+                <File Id="filF3345065D96FD14405B375C429BCFFAB" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\foundation.min.css" />
+            </Component>
+            <Component Id="cmpAECC2B2DB4DBAE72F138E612B5CB0C7A" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="8D8114D3-321D-4DEB-830F-94E29977C093">
+                <File Id="fil9CC7E2EC2DD027892E14FFDCE9A589B1" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\foundation.min.js" />
+            </Component>
+            <Component Id="cmp8BDEE6ED45543AE1794ABF52CD8BF90A" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="EDC0BF5F-7E3B-4947-BFB3-10F264725782">
+                <File Id="fil18E638BCE9A2078DEF422C4A6C9C102E" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\fpdual.png" />
+            </Component>
+            <Component Id="cmp00E61F1AB6B2567735F94B032EEEB016" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="AB430838-CD75-43C6-B7CB-2C203F2C2EB6">
+                <File Id="fil4BA21938D4F078F076D072C60E2B1E94" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\friends.min.css" />
+            </Component>
+            <Component Id="cmpA7F3D339B683DE615BD75309DC9B3626" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="47059060-ABAE-45A6-ACDA-A78C0265EFA6">
+                <File Id="fil04C0078B8FCBBC50A7E6ABE1C8170EA3" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\FSE_amb_lema-1024x238.jpg" />
+            </Component>
+            <Component Id="cmpFFBF63F6574D9ECD42A6488A571B9F36" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="1CF762C2-3CE7-46FD-98E1-F9179C76B78D">
+                <File Id="fil5303C26E677E28354FD393FD31798BDB" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\FSE_amb_lema-300x70.jpg" />
+            </Component>
+            <Component Id="cmpEFBDE306BE4B07E6930141071D6AF762" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="9AD6F15F-2E5C-467B-8FCE-1B0C8D82B0A0">
+                <File Id="filEF5EC17532C18883F5DCEFEA7B37E6F2" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\FSE_amb_lema-768x178.jpg" />
+            </Component>
+            <Component Id="cmp75D6061E9BBA10F30334545DC5EF3BEA" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="B6461770-D63F-4A43-95F7-F191CE8FB5D9">
+                <File Id="fil6FEE9496D00E7DF9FDD847CBDDCA8D59" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\group.min.css" />
+            </Component>
+            <Component Id="cmpB79D114AA17DB7F0E0F987488B37A915" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="F0DCA7AC-3DDC-45A3-ABA9-5D168C86349F">
+                <File Id="fil99ADAD67337FD644E0271AA960C35DFB" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\groups.min.css" />
+            </Component>
+            <Component Id="cmpC12857E44F36A1A6A801BEE5E5659280" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="2C9C069F-6006-4F86-8AF7-3521341FB385">
+                <File Id="filA76D91850470840FF3C5F682E3E61FB5" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\grup_classe.css" />
+            </Component>
+            <Component Id="cmp4DBFCB2DCE201C39D9003702A1A377A3" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="EBFAC99D-44DF-4107-B82D-C4FDAF9362B0">
+                <File Id="filADB6E877BDF794D0C880B90FABCA29B1" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\h5p.css" />
+            </Component>
+            <Component Id="cmp309CF9931E04E4F8EB8881698F7731D5" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="02A8A2C5-F3C1-4CCE-9D6D-C4741DF62B5B">
+                <File Id="filEDAEF7AC78610E6E1F90599897A9B97A" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\hooks.min.js" />
+            </Component>
+            <Component Id="cmpDAD1346A23E273520E7464FD8C95344D" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="173B09B1-B109-47DB-AB3D-36A2CBB1837F">
+                <File Id="fil887222DD3A217B480D321935F9A77BF6" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\hoverintent-js.min.js" />
+            </Component>
+            <Component Id="cmpD2F913C2AD2C693CFD2F3BADEFDAF70E" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="559189A4-F317-4F36-8C4B-241D9938DBF3">
+                <File Id="fil557F2A1BFF2B1FF337A0111D4531E77B" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\i18n.min.js" />
+            </Component>
+            <Component Id="cmpD6548B85749A51087696D41530C0B2F1" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="F36334C7-1221-4E3D-B5A7-1AE6A0758108">
+                <File Id="filC874B81AA228C2CE253BD57FCABF4749" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\ieduca-300x80.jpg" />
+            </Component>
+            <Component Id="cmpA6EE9A059F2620D5E73CC5D64D938DB5" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="F7CAC8B5-73AA-4E9D-8F14-233A28AFC0F1">
+                <File Id="fil3E001BFC0062D461880A2E2E1258CF85" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\ieduca.jpg" />
+            </Component>
+            <Component Id="cmp317A28C3AFE2067CAE5F7F9291EA41DA" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="ECCB480C-1071-46C4-911F-9CE566E2D710">
+                <File Id="filC8E49F25D90C0BCBDDAFD4A587D047CA" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\ieduca_002.jpg" />
+            </Component>
+            <Component Id="cmp8E218ADE4F8D9ECCB8C7E63BB931DD42" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="C8A284C7-6EF4-4136-A743-E5F174E5E533">
+                <File Id="filEE9A7B3CBBE4AEA6C98E2C9B236C074A" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\Imagen-1-1.jpg" />
+            </Component>
+            <Component Id="cmpEADFB3E9EFF42053148BAC76290EF97C" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="D1EB3C0C-F28D-459C-B973-1286B724F8B4">
+                <File Id="fil377C2A6A370565618AB76CBF0EC1B045" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\Imagen-1.jpg" />
+            </Component>
+            <Component Id="cmp36A6EDB854D97475FB99C969A5F728A2" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="A970EEE6-F144-4963-A05D-3A2CD15A078F">
+                <File Id="filDA5216C1184FDB6B81750226276A4138" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\imagesloaded.pkgd.min.js" />
+            </Component>
+            <Component Id="cmp7F01A8D466B862253CF08C51C3A2F6A3" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="2E120077-38D1-4E5D-A41A-A870058E146C">
+                <File Id="fil5EFBE9BD24438416D9EA4062B471DA93" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\image_large-e1551641402378.png" />
+            </Component>
+            <Component Id="cmpC5F2D59560A070D28E424398EA2E24A6" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="EAB16F01-F197-4725-9F38-5480FEE7C9AD">
+                <File Id="fil87154995DD98A04EDF4F014B31A930A0" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\IMG_0225.jpg" />
+            </Component>
+            <Component Id="cmp594F39D20C73D72D8C6BA8A1BA40530D" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="88224ACD-5B0E-4E66-A84D-85AD47210075">
+                <File Id="fil7AA98F3AB7ABF6B48B12F8DC12C8CD64" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\IMG_20230222_153143-scaled.jpg" />
+            </Component>
+            <Component Id="cmp474E5D03E3B9A6DBAE47B0DDA6F9666A" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="D7C6DC8C-889A-42B8-A72B-CDCEB03B1AB2">
+                <File Id="fil8CF7753A7DB346EE23FC7FCC66CB4445" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\jquery-cookie.min.js" />
+            </Component>
+            <Component Id="cmp3771F1891F42FE6A8918FF09BDA2349A" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="E955778E-D723-41D3-B336-97EA26CA3B17">
+                <File Id="fil62EC367D6AE6DCFDC496D47BFEDE6345" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\jquery-migrate.min.js" />
+            </Component>
+            <Component Id="cmp90AB02302B8393ACDF48E98D73D473A8" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="3DD51200-EE68-4FF7-B8F5-31E81E256B61">
+                <File Id="filE7FFDBB8D841F3BA0C6DD73D04425DFA" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\jquery-query.min.js" />
+            </Component>
+            <Component Id="cmp4780CF6FD037181AA030BA202E00CB31" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="514C2EF1-25EC-4FB4-B956-3A107D690263">
+                <File Id="fil82ADA9FE74D330BE5D69D3EC6475ED43" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\jquery-scroll-to.min.js" />
+            </Component>
+            <Component Id="cmp604AD62E143FB199A881D160418ADD20" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="9A0D97A1-44C1-4C87-9E13-C9D171398F75">
+                <File Id="filCFBBE20F9034644FCF4102EEB24E8D58" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\jquery-ui.css" />
+            </Component>
+            <Component Id="cmp14A1A51ACAA0E69BC080A519A1151A62" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="49BD50E7-DE12-491A-B0C0-F87AAD2944EC">
+                <File Id="fil075E10DBDFECCA66884D9A5D2E2E8457" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\jquery.min.js" />
+            </Component>
+            <Component Id="cmp127604BB50A2D199C87857147C3089D0" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="73D83034-6EAC-4238-98F1-A9DE05C826CB">
+                <File Id="filC16EF9651AB15DFD9BB824C0EB9DCF11" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\jquery.qtip.min.css" />
+            </Component>
+            <Component Id="cmp4F9BB3397C2AD4BE87A93E29977675B7" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="73EF2578-E235-4560-9FBF-291881E55791">
+                <File Id="fil1D6C6916ACD13E98FEFA235858DCB663" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\jquery.qtip.min.js" />
+            </Component>
+            <Component Id="cmp04807F153FEC734F728B018235A9AB3E" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="C35F8495-93C0-4A8D-9FA5-A7C3FB7DF2DE">
+                <File Id="filC3CF224E7FC05DD23384EB4E84458975" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\lamevaxtec-icon.png" />
+            </Component>
+            <Component Id="cmpAC11BA54B4B49D7ACC34165952DAC1E3" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="9E2E9C8F-B939-49A8-8A9F-4B542DF12A43">
+                <File Id="fil58087A53C31981B1170D5B29B1E1A99E" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\latest-activities.min.css" />
+            </Component>
+            <Component Id="cmpB35D5C257DB994FE60790DB5C8E656F5" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="9570048F-4571-4E2D-BEC5-AAEA2186BB0F">
+                <File Id="fil06E3012FA6D9D771242E0935942B96E0" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\login-form.min.css" />
+            </Component>
+            <Component Id="cmp3BF671CD178810AF64C957C735549601" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="35F7CA96-DFCA-4D70-8831-870334570E9D">
+                <File Id="fil3C1334AD6A99FBE7FE0D5BD20D4760D5" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\logo-vector-erasmus-e1551641535133.jpg" />
+            </Component>
+            <Component Id="cmp0C47BE694BCC9613DCB41A4A60AB30D8" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="F5682415-D625-45F3-899F-8B866B01803F">
+                <File Id="fil2D7C6EBB1E8936FEC782C318FD9A0857" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\logo_gene.png" />
+            </Component>
+            <Component Id="cmp263E601F56D6D5EBB9973C21A58E59A4" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="CE117510-7E07-422C-AD5D-73E42B98B38A">
+                <File Id="filEAF736909BA90367C1D6B722AFE9701A" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\logo_xtec.png" />
+            </Component>
+            <Component Id="cmpDD310767A75F14F99A072C484FF47822" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="058F826F-BDD1-4440-9C91-0F9B25662B57">
+                <File Id="filD066C62F07CDD2EA9618BBAB1BB78283" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\marenostrum.jpg" />
+            </Component>
+            <Component Id="cmp8E7B66025E32A8545DDB97F017B4B6AD" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="60B09FA8-2AA6-4CB7-AC57-02B5BD131797">
+                <File Id="fil675FF99B466E298866FEDAF7E0D9ABA7" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\member.min.css" />
+            </Component>
+            <Component Id="cmp4844209D96327BE8D4E32234FFEBFD7E" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="E04E978D-1A13-472F-A4B7-E8FE1A08D671">
+                <File Id="fil73829F5642E032C74FE3FA7B772C9CBC" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\members.min.css" />
+            </Component>
+            <Component Id="cmpC549ADCC80BB7261E741A97ADBC23CF9" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="266003ED-9CE9-4E6C-890D-B1F923CF9B71">
+                <File Id="fil9F6D968D9A9F79D28935983AB2949425" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\menu.min.js" />
+            </Component>
+            <Component Id="cmp41418CCAE5ADEFAE07DAD63F453E8F16" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="395B7545-2F4D-49EE-85A0-5E1EA77EB208">
+                <File Id="fil8DE2E96F08F64B7180129B4C7E7DE634" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\milaifontanals.html" />
+            </Component>
+            <Component Id="cmp53AE680D5A9CAD64DF3D7353AB7D6321" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="43E218CF-ACBA-44A6-89D3-EDBEE42D8BF5">
+                <File Id="filE52B67BB4B15F8F8604FDACFA8AE9A66" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\mixitup.min.js" />
+            </Component>
+            <Component Id="cmpC987442EF7FE87A2F9A2DC1D41304868" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="DFDA5D78-35D7-4D1A-816C-BA79796FEB30">
+                <File Id="filE48BB00E2431ECBDEE2B164F29F6B6B1" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\moment-timezone-with-data.min.js" />
+            </Component>
+            <Component Id="cmp50C19E5ED2617F289703D910DD8DF22F" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="D7911A7B-0F67-4A4D-8FD5-73A8ACF4E8ED">
+                <File Id="filBA8BEE16F3095DE024DCB8FFFDCFD6BE" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\moment.min.js" />
+            </Component>
+            <Component Id="cmpD005AAD2720FFAE026AA9BC08AB10896" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="1D33958A-31D3-4B99-8CA3-1363658A179A">
+                <File Id="fil6E363072D26775C01A0EDBE8D605212F" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\moodle-icon.png" />
+            </Component>
+            <Component Id="cmp9E732E0B3AC5701E54C318F3C4C3D05D" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="949F31CE-80B6-4E08-A154-5DB842E5F4EC">
+                <File Id="filB9B8151B6B277C8D25DEB45EA8AFA556" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\normalize.css" />
+            </Component>
+            <Component Id="cmp4684A76B6B5EFD482D3FAF96AF5CF0AE" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="C377C63E-0872-4DB9-8C2C-14626B80E4CF">
+                <File Id="fil36AC5E196A1E3FD0CE383D5C1704E13D" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\odissea-icon.png" />
+            </Component>
+            <Component Id="cmpB48CFE60AF68306EBE00B0174231E83B" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="01DD6620-0A89-4511-9A1E-58BC425B20FA">
+                <File Id="fil5F4B2F791C8DFB1BDB269F9E28AECB34" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\Orientacio.jpg" />
+            </Component>
+            <Component Id="cmp3610F585A5814D80D7B26F93AED43A50" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="B6D5D16E-EB18-4053-93A4-55A85B6E2871">
+                <File Id="filD71938E5F454239A5C4742239D33387F" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\page.html" />
+            </Component>
+            <Component Id="cmp0D5A7BB5BCD16B0046436833D350B0CB" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="2296782D-C5F6-470A-9A9D-A34E1C1C2F1E">
+                <File Id="filCF6321ED6381B009F6B1B3484391604C" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\page.js" />
+            </Component>
+            <Component Id="cmpE212D86124686B4208BA455A6B76CBC7" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="D29097D2-C154-4AA5-814A-40331BFC8E91">
+                <File Id="fil3B4987CB7683C6C0BCE37B2758EF1B93" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\portalcentre-icon.png" />
+            </Component>
+            <Component Id="cmp1C11EE89BB9A1D88ADB1AF9F124713A9" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="C05E83E8-18FE-4535-9EEF-89A73D197F06">
+                <File Id="fil8856BECCF4630349601BA83ADABDB705" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\reactor.css" />
+            </Component>
+            <Component Id="cmpFEA18558E657D759167F2EF6D5E618B5" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="02D30BC0-6C57-4765-98A3-C393EEBF6ACB">
+                <File Id="fil6F6F564D6D161987190CEADE78F9A8BB" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\reactor.js" />
+            </Component>
+            <Component Id="cmp24E9D23589D79FBB84D6BAC19D4FE002" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="FAAB2AF6-0194-456B-8238-BBF435CD7F9F">
+                <File Id="filBF9C1B9B2F28C2E8E614D41E5BD6CD31" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\saga-icon.png" />
+            </Component>
+            <Component Id="cmp86664F915E4464C599029538E425D8A5" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="7F4BE4A5-CFFA-495D-B770-5924F252AE74">
+                <File Id="fil477F5C75F4C693CE739257A8505DB3AB" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\sdk.js" />
+            </Component>
+            <Component Id="cmp391EA19590E24C2CDF5B35B6F0510534" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="E6CE3818-9BB5-45FA-AEEE-27776C0499BC">
+                <File Id="filBBEE405B7FCCFE64AEECC747A4AB940B" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\sdk_002.js" />
+            </Component>
+            <Component Id="cmp82A9694BECEC0A01F7CDBF70155B639A" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="4C84B8D1-0DCE-4FDC-95B7-B37A36A3A974">
+                <File Id="fil65D0546DBD53DD2EF960DBAA69D5A11B" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\sitewide-notices.min.css" />
+            </Component>
+            <Component Id="cmp89A858037224919E9A9734F4701D27C2" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="46923D0C-DC28-41B0-934D-EC806F3AEAA9">
+                <File Id="fil9809333F0F1EAA72F4AFA5D7E4F5B024" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\sm.html" />
+            </Component>
+            <Component Id="cmp755836FFCE79AC5DFB6F1E12BEAF90DF" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="54C2B9AD-F3BA-4DC4-9554-117643F50503">
+                <File Id="fil00E03B313E3518D96DD445ACD2838277" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\style.css" />
+            </Component>
+            <Component Id="cmpB6E2C114E42E197A60A664C0407AD0B2" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="1BC2D01D-D9E2-4093-82B4-72B2E76E8062">
+                <File Id="filE7CD35E27E5D950BF0588304E9650C9C" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\style.min.css" />
+            </Component>
+            <Component Id="cmpD5E9E05346891648726BF80E654BC413" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="10FAFC8D-98E8-4476-8F66-B599400B2C1C">
+                <File Id="filF765FFECF1E4C53AB03C65601E029DBA" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\style_002.css" />
+            </Component>
+            <Component Id="cmpCD451150B92D7A64EF74B472795B7818" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="DD42892F-2E44-4FF3-96F8-BA7A3959783D">
+                <File Id="fil00DD73F646D6F152ABF74C5390277773" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\style_003.css" />
+            </Component>
+            <Component Id="cmp20E78A72FDE87F0B84EF0C46E8867FB4" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="B059366C-DB92-4159-832F-4BF3B4641119">
+                <File Id="fil133D5CC9BAA84D8A3E1A91F52A9E5376" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\suggest_complete.js" />
+            </Component>
+            <Component Id="cmp43422ED2789532C00E8698B36C04F480" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="226C0900-4387-4E69-A333-AE42C50A9E29">
+                <File Id="filD51EECD0E2FD21F52D413A9C0724EE40" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\tabs-custom.js" />
+            </Component>
+            <Component Id="cmp33061C88C9E5D6502D70225E84E13D8C" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="0D6A7681-4271-4A1A-A6F3-4B007500C5E1">
+                <File Id="fil6643D531971B4AAC8D6A2C208714FA04" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\timeline.16b53cc33aaa562f8f41a495bf720289.js" />
+            </Component>
+            <Component Id="cmp672E688635451AE5978092237463A7FC" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="F1C1803D-1032-4832-A515-6DCB96234B11">
+                <File Id="fil63950DC7FF3BD0029FA97963549AE110" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\unnamed.png" />
+            </Component>
+            <Component Id="cmp3B5FB8EB1D28288E556DD4228ED621DC" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="72CFCC4B-49C0-425E-8768-1760B179FAF1">
+                <File Id="fil7D282E62507616FCC8F2EFA540607731" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\widget-groups.min.js" />
+            </Component>
+            <Component Id="cmpFAA5E6AE86E77C2F494478DB919E1150" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="1E31486D-8350-4235-89D8-DBECFBB4C37C">
+                <File Id="filD36809CB21E3CDE826CA136805BC8BCD" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\widget-members.min.js" />
+            </Component>
+            <Component Id="cmp9424DDD12A2AB8D6DD711BE95FBCD562" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="F7E5886E-AC44-4CB3-9D6B-70D2220D378A">
+                <File Id="fil67A7984A2D93447680642C2707F2FAFC" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\widgets.js" />
+            </Component>
+            <Component Id="cmp38807BB0DF5A1D028D2F23DFA229BEF8" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="28DDBC0B-A4C6-4AA8-971C-F906B9A65DA8">
+                <File Id="filC233FC2BA28093378E6FAC0C16234233" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\widget_iframe.html" />
+            </Component>
+            <Component Id="cmpC1C0AF22A5CC65DF9647244499E976CA" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="64419D37-4EF4-445D-99D6-0E365AF7074C">
+                <File Id="filFAB6410CD4541E801A2E8A24CE0B7618" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\wp-embed.min.js" />
+            </Component>
+            <Component Id="cmpFE078C9106607BADEBF12CE5F7F512F9" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="4166B8B3-60C6-4A88-979E-F3ED3ED417B8">
+                <File Id="fil4642BBE47B520780A005E73154C1211A" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\wp-emoji-release.min.js" />
+            </Component>
+            <Component Id="cmp9C1ACA0C01488578AB1FE17A0354A1F5" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="57D3643C-2189-4F98-B92F-4BBEC63213D9">
+                <File Id="fil9240E2E23175C53FF3D775C9A803E3DA" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\wp-polyfill.min.js" />
+            </Component>
+            <Component Id="cmp21EEA431E83C888A06EE0799CDB6EE7E" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="F73613A7-47C2-4CC1-8EFE-514EFD17BF5C">
+                <File Id="fil83F27495A4CED941413A3673C8F1B651" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\xtec-icon.png" />
+            </Component>
+            <Component Id="cmpAE94E619036DAF48D7C6D35B13D3A5F0" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="1DA19305-C0B6-4E22-9A03-F5D94EF5D876">
+                <File Id="fil93D4ECB130B89F9A0E546872B6A16050" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\xtec-stats.css" />
+            </Component>
+            <Component Id="cmpF5B1B7D790386F40E88E304254E64D1C" Directory="dir099EE867361442AB6476EA9C228D3C83" Guid="51D666C7-4FE5-4121-8D48-9DFBECC027A8">
+                <File Id="filA60962BA7D075442488398F49EA9AD0C" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\xtec.js" />
+            </Component>
+            <Component Id="cmp7DA6E7434BCF5DBF65968684389B149F" Directory="dir242D6ABC9EE1C5A11152EE3E43D7A39A" Guid="D6967905-2792-45A9-8711-E039C80FEDA9">
+                <File Id="fil79BED4450899628446DAE7193931327F" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\62cd937b61c1e300175a3edc_data\2fc7f756-316b-4a16-8aad-5927967220a2.png" />
+            </Component>
+            <Component Id="cmpC78E31FDD68B3861250D8A396D8A135A" Directory="dir242D6ABC9EE1C5A11152EE3E43D7A39A" Guid="82260331-5D52-4058-9FA0-44267DCC4516">
+                <File Id="fil0C616A13DCAF6A17B4F2DF627CCBC4C1" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\62cd937b61c1e300175a3edc_data\31af6ebf-619b-43d8-bf1b-337931b55b7e.png" />
+            </Component>
+            <Component Id="cmp97E3C5F500058568BF445930FC4FF11F" Directory="dir242D6ABC9EE1C5A11152EE3E43D7A39A" Guid="75F8DD4D-5014-467B-801F-2CCD6BFF71A2">
+                <File Id="fil6B1FD3A792E6C0DB7F74B83361041D02" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\62cd937b61c1e300175a3edc_data\css.css" />
+            </Component>
+            <Component Id="cmpC36C3F7F3D3F184A43E45BE7739CC037" Directory="dir242D6ABC9EE1C5A11152EE3E43D7A39A" Guid="8E771D7D-95B9-4EC5-838D-EEB8C759C615">
+                <File Id="filF0AAE4611A10065464F4648407DD4F32" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\62cd937b61c1e300175a3edc_data\e46ed5d0-27d1-4f8f-8ffe-b6a917b56742.png" />
+            </Component>
+            <Component Id="cmp61117AF02A9B2461AD0EE478EB28562C" Directory="dir242D6ABC9EE1C5A11152EE3E43D7A39A" Guid="6BAB98D7-DB7A-4AC3-AAF5-EDE7444AEBBC">
+                <File Id="fil004225B5D5644B4E459FC80C38B6E661" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\62cd937b61c1e300175a3edc_data\exclusive.0.0.51.min.js" />
+            </Component>
+            <Component Id="cmp5FEC52C2F9D4CA19CCD395AE065B8491" Directory="dir242D6ABC9EE1C5A11152EE3E43D7A39A" Guid="92754E52-DFDC-4083-B63B-8600497A2B77">
+                <File Id="fil4CF1B5343FC61C0E3AF9069BE979D426" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\62cd937b61c1e300175a3edc_data\gtm.js" />
+            </Component>
+            <Component Id="cmp1D6A90F5059C4B4ECF7AEE1665BDD620" Directory="dir242D6ABC9EE1C5A11152EE3E43D7A39A" Guid="CAAB2A9B-BA52-47E2-8D47-AC3C6DA35735">
+                <File Id="fil9DC311319DBDE4C25E477B1A3C56C73A" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\62cd937b61c1e300175a3edc_data\main.4f83ab48.css" />
+            </Component>
+            <Component Id="cmpB601E0186BC433193E4F4004585BB496" Directory="dir242D6ABC9EE1C5A11152EE3E43D7A39A" Guid="12E41AE8-1BA4-41AA-8725-10B1FF3D7518">
+                <File Id="fil97B625F775403C550663AD95AD127C4D" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\62cd937b61c1e300175a3edc_data\main.f00e7e29.js" />
+            </Component>
+            <Component Id="cmp72D46E502C8B10D6C7FA4AA57602894D" Directory="dir242D6ABC9EE1C5A11152EE3E43D7A39A" Guid="74644924-FBB1-4BC8-AFDC-9F4489B0CF64">
+                <File Id="fil0166A1707258DF35FFB5E558C6AA4290" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\62cd937b61c1e300175a3edc_data\runtime.58beb689.js" />
+            </Component>
+            <Component Id="cmp93D8BAA1838BBF842082A658C5750037" Directory="dir242D6ABC9EE1C5A11152EE3E43D7A39A" Guid="CF03D21D-99DF-42F2-B894-8A21B36C92C2">
+                <File Id="filC9E05CDAC5F79BDA39FF9EDF2CCDD02A" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\62cd937b61c1e300175a3edc_data\vendors.0.0.51.min.js" />
+            </Component>
+            <Component Id="cmpD38A2CC0AF5670A4BB853C93D77FE453" Directory="dir242D6ABC9EE1C5A11152EE3E43D7A39A" Guid="227ECC69-0A06-4DC5-9B5A-EB447A7BA9EB">
+                <File Id="fil8253E13A6753C80399553C28D71D9BB0" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\62cd937b61c1e300175a3edc_data\view.0.0.51.min.js" />
+            </Component>
+            <Component Id="cmp4D8E0E52AAA52C52B0DA96D78918BD3E" Directory="dir242D6ABC9EE1C5A11152EE3E43D7A39A" Guid="FBC8660B-05B7-464A-8882-C1DA59C2BBC8">
+                <File Id="fil579CADBE713BAC2ACF44B9377E88C361" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\62cd937b61c1e300175a3edc_data\view.0.0.66.css" />
+            </Component>
+            <Component Id="cmpC354DAB3A7E697BB015C7AE8FC561BD3" Directory="dir242D6ABC9EE1C5A11152EE3E43D7A39A" Guid="F3A95F44-4AA1-4D03-AD10-65F2ADD09526">
+                <File Id="fil5601524CD52203FCF23B1281C792DE38" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\62cd937b61c1e300175a3edc_data\watermark-edu.png" />
+            </Component>
+            <Component Id="cmpE568026A650C0264C8F1336C0D8A9B4E" Directory="dir72AF5D9F596921C64700F8C263B19E52" Guid="36D8AD04-8981-4961-87F4-8E934ECF5E67">
+                <File Id="filB8A028FB358D6A025A577F495073418F" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\64075be14b8e5b0013354d02_data\css.css" />
+            </Component>
+            <Component Id="cmp2CBF6C306B3E35BF1C40220BD0C6C7EF" Directory="dir7259B1953E933A644543935A32C9E8A0" Guid="E626107C-A0FD-41EF-BE46-D7948A1B2470">
+                <File Id="fil2E410647AD09C1E8E8A8A7A3EE406119" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\milaifontanals_data\0.12059cc9aae4f779ab68.js" />
+            </Component>
+            <Component Id="cmpD2ABD482745D825888F1733B70AF6589" Directory="dir7259B1953E933A644543935A32C9E8A0" Guid="8FF9007F-2A01-41CC-B328-4F086CA03DCC">
+                <File Id="fil74682211CB4941F7A7C7D9A64D09E7A1" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\milaifontanals_data\1.6dc2052b2926970f8f23.js" />
+            </Component>
+            <Component Id="cmp27B7C9D8316D3BC21DDBB0B424BEF70F" Directory="dir7259B1953E933A644543935A32C9E8A0" Guid="21870FFF-1960-4996-9B5E-01955132FEEA">
+                <File Id="fil76F6BE1A9F2AB85C83488DA9A1BBAD5D" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\milaifontanals_data\16.bef86bd1520696dea547.js" />
+            </Component>
+            <Component Id="cmpD4C054C66A95C6BD7152278C80F6CAC0" Directory="dir7259B1953E933A644543935A32C9E8A0" Guid="68B7ACEF-0D5A-46F7-ADEE-2F9CC137BE22">
+                <File Id="fil5C5306BA82063FC94F28F1B15039624D" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\milaifontanals_data\1f4e2.svg" />
+            </Component>
+            <Component Id="cmp3F522E9F4284D947CE835EEBD1F2692D" Directory="dir7259B1953E933A644543935A32C9E8A0" Guid="D6660E55-A02A-4C4D-BCA2-1A5896F81146">
+                <File Id="fil446A525CC038586578E8ADC0E2CA11D7" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\milaifontanals_data\2.691622e4391d1973cb65.js" />
+            </Component>
+            <Component Id="cmp66F5C6B0057CF55BDE5030C3B189035A" Directory="dir7259B1953E933A644543935A32C9E8A0" Guid="0FBCA0B4-1BF0-44F1-BCE4-83AE62F2BD14">
+                <File Id="fil36D7EFB6903069FF475A44191C558486" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\milaifontanals_data\3.dc446a58e72d99fbbc5e.js" />
+            </Component>
+            <Component Id="cmp3C891461F0B309CCBF281A526E7F79CF" Directory="dir7259B1953E933A644543935A32C9E8A0" Guid="9D1AF714-5492-41AC-81F4-AC29CA3812BC">
+                <File Id="filCFD1E93076FFA5536646F6E2DC0C2897" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\milaifontanals_data\4.c99a76747fd916e95958.js" />
+            </Component>
+            <Component Id="cmpAFC01A7385AB8A07E42E4E46851B9B7F" Directory="dir7259B1953E933A644543935A32C9E8A0" Guid="35441939-363D-433C-A906-DABA46A972D2">
+                <File Id="filDBD72F20119B876154F7D4D7FCF76E25" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\milaifontanals_data\4oD43luA.jpg" />
+            </Component>
+            <Component Id="cmpBDA1DAB4D0AC6A22B44A8FDC9341C484" Directory="dir7259B1953E933A644543935A32C9E8A0" Guid="E49B8BF8-F6F0-4F2F-9173-277E1AE89D6F">
+                <File Id="filD4CC7911A9FD8C3C9CB1FFDCAAF4B0D7" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\milaifontanals_data\6.d1bd699b8a5d6cc08f0b.js" />
+            </Component>
+            <Component Id="cmp4B7FBF7FB09EFE1F566DB615EC4149FF" Directory="dir7259B1953E933A644543935A32C9E8A0" Guid="45DFA0F5-6122-4C42-8280-C5227401A9F6">
+                <File Id="fil752A6D015A43443FEBF1B78DBAEFCCDF" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\milaifontanals_data\84AWYTqw0dX0Vc2F.jpg" />
+            </Component>
+            <Component Id="cmp4B59BB9F7F9AB668567271650676B432" Directory="dir7259B1953E933A644543935A32C9E8A0" Guid="64BE3FFA-E65E-4BAB-A9DF-09A32367669B">
+                <File Id="filEA98FD65588DD324C720957EE0E324B4" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\milaifontanals_data\9_XpFPwX_normal.jpg" />
+            </Component>
+            <Component Id="cmpD8D4117E9799759D2B3E8286AC390753" Directory="dir7259B1953E933A644543935A32C9E8A0" Guid="0002240F-4312-4CC5-9258-DEAC9B1944F3">
+                <File Id="fil9E20F05E3F211E85C029338B299D1271" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\milaifontanals_data\Fc3do-PXwAgienJ.jpg" />
+            </Component>
+            <Component Id="cmp21E67B0B2C63CCDC72D9D3B160475534" Directory="dir7259B1953E933A644543935A32C9E8A0" Guid="254DC715-4B27-478F-AC71-C3F5BB6E4733">
+                <File Id="fil82C8A44A81EC821B437657C0D53DB44B" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\milaifontanals_data\FcFDlLUWIAERhh3.jpg" />
+            </Component>
+            <Component Id="cmpCC3C5B3DA29F5685AFE3043344D1A115" Directory="dir7259B1953E933A644543935A32C9E8A0" Guid="B25EDC37-C794-4EF5-AFAA-171EE2298A88">
+                <File Id="fil87F4D4D9F0DF1D9C561B5D26EB9B6874" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\milaifontanals_data\FcFDlLXXwAYHV0P.jpg" />
+            </Component>
+            <Component Id="cmpC99DE53B28F3BB187C72A118E2DFE186" Directory="dir7259B1953E933A644543935A32C9E8A0" Guid="8B87C585-5AC8-4F98-B0DA-717892EBBE48">
+                <File Id="fil4F29163C93B020257A874868DA3CD183" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\milaifontanals_data\FcFDlLYWAAEpBrO.jpg" />
+            </Component>
+            <Component Id="cmp643B5FDC844119FF1435610BA26F2124" Directory="dir7259B1953E933A644543935A32C9E8A0" Guid="B87F9758-503C-4A5A-B30F-BA2FB5420441">
+                <File Id="fil8C745BD01F53D42CC3237B4EA862AC2C" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\milaifontanals_data\Fdrb5cxXkAMUrqb.jpg" />
+            </Component>
+            <Component Id="cmpB22FDCC7882077F49439AAD301493A3C" Directory="dir7259B1953E933A644543935A32C9E8A0" Guid="3A3F4141-2363-4E9F-99C2-89DFC73A0DE3">
+                <File Id="fil950B9E62D6D9D54D45216257E3E3D027" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\milaifontanals_data\Fdrb5cyXgAgmvf6.jpg" />
+            </Component>
+            <Component Id="cmp1CF46EDBE88542E5B15C2B25C69DEC7A" Directory="dir7259B1953E933A644543935A32C9E8A0" Guid="6095A9CF-F5CF-4A28-9611-40C6593A3803">
+                <File Id="filC64CE892AB0E75BC97AAF5DEEB25FDAB" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\milaifontanals_data\Fdrb5czXgAMx_lU.jpg" />
+            </Component>
+            <Component Id="cmpF028E7C509994AFB9CC56812A707B493" Directory="dir7259B1953E933A644543935A32C9E8A0" Guid="D4877A7E-DC08-4C0F-AFBB-D0390EABBB75">
+                <File Id="filF6E908757D94A01A59B7D2CE4F73CA5C" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\milaifontanals_data\FeycGrgWQAIQSeY.jpg" />
+            </Component>
+            <Component Id="cmp61374D0EB36624F431C4DC842FB9C891" Directory="dir7259B1953E933A644543935A32C9E8A0" Guid="9FBD1C84-6430-49C7-9A7F-5DA4279EE795">
+                <File Id="fil536A608F3D957C4B992E5A8027CD9D6B" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\milaifontanals_data\FeycGrhWYAAemcX.jpg" />
+            </Component>
+            <Component Id="cmp5E6C6AB89C7F412C3CB73D32491A7FD3" Directory="dir7259B1953E933A644543935A32C9E8A0" Guid="8AB39398-9BED-44EF-95B2-DE9F34E72506">
+                <File Id="fil4340CFA442BB9240A7B7BE3A2BB74ADB" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\milaifontanals_data\FeycGrhWYAE5-Vt.jpg" />
+            </Component>
+            <Component Id="cmpCB3188A6A0A82C8225136CA02E5CCA9E" Directory="dir7259B1953E933A644543935A32C9E8A0" Guid="76852DEF-5396-4E56-90BA-80AE166707C7">
+                <File Id="fil3C1B11A73E1403D4C01A5D18D5CF7256" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\milaifontanals_data\FeycGriX0AEtwui.jpg" />
+            </Component>
+            <Component Id="cmp8EAF2F73812BFBD5D2608B1CD7EFE8C1" Directory="dir7259B1953E933A644543935A32C9E8A0" Guid="2490F8ED-52A1-4AB7-AC8E-C7E7C8FF13EC">
+                <File Id="filEE12839F604DC57F1829F2BA27E8730E" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\milaifontanals_data\FfmrzFIXgAMQ2SM.jpg" />
+            </Component>
+            <Component Id="cmpF62098825671BE970ACA363F8123DA31" Directory="dir7259B1953E933A644543935A32C9E8A0" Guid="328078F4-E22C-4777-A040-997C7390BEE0">
+                <File Id="filE8CC7C723A6B9723B1F2AE20B915AA5C" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\milaifontanals_data\FhozFvGXEAA-J3S.jpg" />
+            </Component>
+            <Component Id="cmpD05D5C625D7F4E9ACC9DD20D7FB1FA1C" Directory="dir7259B1953E933A644543935A32C9E8A0" Guid="8DF2344D-E1D7-48BD-89F2-CEB1C18C8886">
+                <File Id="fil62F6617764B716B941E974C6C3B433A1" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\milaifontanals_data\FhozFvIXEAAFhwI.jpg" />
+            </Component>
+            <Component Id="cmp78C921BE576259606920215F07D87567" Directory="dir7259B1953E933A644543935A32C9E8A0" Guid="890C8125-9C25-4B91-8ADA-315F507E0581">
+                <File Id="fil4C66B972EB7E61F51769ED21E2023BDF" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\milaifontanals_data\FhozFvIXEAIhXDw.jpg" />
+            </Component>
+            <Component Id="cmp929BBD5C96D7E20C5181259BB74B4FCD" Directory="dir7259B1953E933A644543935A32C9E8A0" Guid="33ADB304-C98B-473A-8140-FE4BA99C21D0">
+                <File Id="filE5E0D8641DB672C8BD26CB78E2DC4BFF" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\milaifontanals_data\FhozFvIXkAMBuXd.jpg" />
+            </Component>
+            <Component Id="cmp7AD7B8BBE29206E2AC63B91B08B0B90A" Directory="dir7259B1953E933A644543935A32C9E8A0" Guid="92F0EE7B-1C39-4696-B01C-4BB4CDFCC758">
+                <File Id="fil96D37DA855AF54CAF37A52D7EAB4D420" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\milaifontanals_data\FkhpixZWAAAz0Zw.jpg" />
+            </Component>
+            <Component Id="cmp58B6F29A3C21C6E37D9CAF85629582B7" Directory="dir7259B1953E933A644543935A32C9E8A0" Guid="7FDC5FEC-F203-40E3-9B79-988E1F1536D1">
+                <File Id="fil1EEA644F2360212AF08D80D03632523D" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\milaifontanals_data\FmrQSvdXoAAxwb-.jpg" />
+            </Component>
+            <Component Id="cmp5DD508560F3E9A7309CAAD467E86BF64" Directory="dir7259B1953E933A644543935A32C9E8A0" Guid="EC47039F-A072-4088-9B4C-F594BDC9529B">
+                <File Id="filF6537AA815F35463FF93E7D8B7803351" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\milaifontanals_data\Fqr3ek6XgAA2eX9.jpg" />
+            </Component>
+            <Component Id="cmp4F7CDE6E7CA5AE712F80C3B97A46068D" Directory="dir7259B1953E933A644543935A32C9E8A0" Guid="FB626A5B-130A-49EA-9520-DC0FB81C2EA6">
+                <File Id="fil4985B34DC09D3CCC7DF94B0659FD7B43" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\milaifontanals_data\Fqr5-WDWcAExMsB.jpg" />
+            </Component>
+            <Component Id="cmpE06CFAFE2612499A8D0ADC351378966C" Directory="dir7259B1953E933A644543935A32C9E8A0" Guid="84EAD75B-F8F4-48AD-B2D1-7F7D7D2744A2">
+                <File Id="fil008C3936E3ECE10B66688AF15DF494C0" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\milaifontanals_data\FXTHHt1XgAEDEt7.jpg" />
+            </Component>
+            <Component Id="cmp71C180E729142FBBA596C21960977B42" Directory="dir7259B1953E933A644543935A32C9E8A0" Guid="DD77C8CB-34D7-436B-9EDB-4D32869DA062">
+                <File Id="filBEE6D6904D79E9307EF32F7E91EF5FEE" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\milaifontanals_data\FXTHHt1XoAAV9D3.jpg" />
+            </Component>
+            <Component Id="cmpF3FA96929B6E90B55D57F62FD71EB001" Directory="dir7259B1953E933A644543935A32C9E8A0" Guid="698F262C-18A7-419E-A070-43F246915EB4">
+                <File Id="fil4AF0137172220856D03F1D592FEB8432" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\milaifontanals_data\FXTHHt4X0AAd43c.jpg" />
+            </Component>
+            <Component Id="cmp695312749B503266A647CBF080ECDBB8" Directory="dir7259B1953E933A644543935A32C9E8A0" Guid="420E1176-7F82-4D81-9FE4-A6663E460B6C">
+                <File Id="fil9E6608B28A500C11EE458485CE636295" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\milaifontanals_data\FXTHHt9X0AAd7nV.jpg" />
+            </Component>
+            <Component Id="cmp79D14B82B813293C9D6F06CEFC76429F" Directory="dir7259B1953E933A644543935A32C9E8A0" Guid="8B6A34CC-B260-4632-A245-9E649CEDB941">
+                <File Id="filF340143B0545D27557AAAB751A6572F3" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\milaifontanals_data\FY3QmKhWAAE0ZtK.jpg" />
+            </Component>
+            <Component Id="cmp9E62742B187B4BE39B3CCD842A7961BA" Directory="dir7259B1953E933A644543935A32C9E8A0" Guid="A78ECF14-09F4-4F03-9317-77B026D56A0C">
+                <File Id="fil74A72E4CB09CC30AEA583E93C563D498" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\milaifontanals_data\FYm-2XiXwAEtgls.jpg" />
+            </Component>
+            <Component Id="cmp7122E408BF2D1D47B45B1128A124E5F0" Directory="dir7259B1953E933A644543935A32C9E8A0" Guid="7B08DD4D-D568-429E-86BB-59508096011E">
+                <File Id="filF147F4214CAF94B39FE903FDB699FB63" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\milaifontanals_data\HatVckKo.jpg" />
+            </Component>
+            <Component Id="cmp5ECB08F49D2C2BBE21C81B6CFC0C615B" Directory="dir7259B1953E933A644543935A32C9E8A0" Guid="DFD9F5C6-CA9B-435C-8391-5825E6B30084">
+                <File Id="fil1F45B52B45E7D8CB603BB0D878A81F8A" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\milaifontanals_data\loaders.card.DefaultCard.62f0b5bedf79f4020932.js" />
+            </Component>
+            <Component Id="cmpB6AE5A0027C151C4C5D27996157D2FB3" Directory="dir7259B1953E933A644543935A32C9E8A0" Guid="546306A3-9FF1-4841-B096-7F388D0AFEEF">
+                <File Id="fil9638EC236F1EC33D1DF344C890D51AF0" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\milaifontanals_data\logo4_normal.jpg" />
+            </Component>
+            <Component Id="cmpB7E4DD63669EF866D39DCE1A6225CE8B" Directory="dir7259B1953E933A644543935A32C9E8A0" Guid="4C6CFB03-EF99-43E4-8FCF-13D9FEC16C10">
+                <File Id="fil60FB2A4814F417E79CB208CE12C4BAEE" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\milaifontanals_data\main-fd9ef5eb169057cda26d.js" />
+            </Component>
+            <Component Id="cmp90837A3242F208FB5D7ED9674BA3ADD1" Directory="dir7259B1953E933A644543935A32C9E8A0" Guid="B1A71C8D-FC3D-4DF5-A621-7653679D0BB8">
+                <File Id="filED29C88C9E2D2ACD8FABB32B23D39116" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\milaifontanals_data\mgJPLvfk.jpg" />
+            </Component>
+            <Component Id="cmp2C361C3A38D6AA62E52266681D15F10C" Directory="dir7259B1953E933A644543935A32C9E8A0" Guid="BB91ACBF-CCA2-4BC5-A88C-7BF250AD5397">
+                <File Id="fil06FF046682AC288E87A6758B917F1F44" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\milaifontanals_data\modules.20f98d7498a59035a762.js" />
+            </Component>
+            <Component Id="cmpCD1DDD6379DD459556A3A1CCFBDDACDC" Directory="dir7259B1953E933A644543935A32C9E8A0" Guid="8F26D3A3-336B-4415-96EA-0B6597ADA660">
+                <File Id="filC83BE6F12F0C88A1872F06D4C326BA54" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\milaifontanals_data\ondemand.Dropdown.4a5d9e2d4c04334f8432.js" />
+            </Component>
+            <Component Id="cmp8B0013CD91A1790182B09F817C676888" Directory="dir7259B1953E933A644543935A32C9E8A0" Guid="3AEC9004-C982-4B58-B60C-9609A3E152B6">
+                <File Id="fil42A9B0BD41F6C76DB30857527D6377F0" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\milaifontanals_data\pFyIw4Ul.jpg" />
+            </Component>
+            <Component Id="cmp4B420455A92FF7B9F10F5AB41925ED89" Directory="dir7259B1953E933A644543935A32C9E8A0" Guid="229B7EEC-E244-4421-8D6F-CE46A414CE92">
+                <File Id="filA5319CAA65D1EDC53C36DC24C55D89B0" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\milaifontanals_data\polyfills-3b821eda8863adcc4a4b.js" />
+            </Component>
+            <Component Id="cmp68DE78CAF8A0B6B264E75C8E92B14CFD" Directory="dir7259B1953E933A644543935A32C9E8A0" Guid="F23FE649-7877-4534-9B54-300FE20CE2F6">
+                <File Id="filEB8589F9982AE35199A6CC7B169F3E08" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\milaifontanals_data\runtime-2aa7644ee0b682b3d080.js" />
+            </Component>
+            <Component Id="cmp65B16EE953459FA9953D46276C629726" Directory="dir7259B1953E933A644543935A32C9E8A0" Guid="F070D88C-30F9-410A-A5A7-A52A6EE09A31">
+                <File Id="fil3BFDDD861E338C20668239C818E1DBDC" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\milaifontanals_data\Synvsrqr.jpg" />
+            </Component>
+            <Component Id="cmp59DCA4E493BAD87BB1226B7AA4003CB5" Directory="dir7259B1953E933A644543935A32C9E8A0" Guid="C2DF45B5-44D6-4F76-B785-72B2476FC163">
+                <File Id="filD03CDF725CA2A9C723B0E90970BE9B03" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\milaifontanals_data\vendors~loaders.card.DefaultCard.bb86da9c6b7f7c1afe77.js" />
+            </Component>
+            <Component Id="cmp9B657758CA58EE312239A0727B4279D4" Directory="dir7259B1953E933A644543935A32C9E8A0" Guid="978CA1DD-9EDF-4257-A548-5CF4295CC2FB">
+                <File Id="fil9B8E1CD8C429361FC4E268C8CA3654BD" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\milaifontanals_data\vendors~ondemand.LottieWeb.d0dde7eb339d57b45e0d.js" />
+            </Component>
+            <Component Id="cmp2FC6A08F260274539F22D8DFA8DAC8C7" Directory="dir7259B1953E933A644543935A32C9E8A0" Guid="287C5876-176A-4800-99B6-A2ECECAE6F9F">
+                <File Id="fil0A0B147C271B316674F7CA2B2F0C84F3" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\milaifontanals_data\xOmtJzTs_normal.jpg" />
+            </Component>
+            <Component Id="cmpF30C007CE0A716C124A8F0120A3CD739" Directory="dir7259B1953E933A644543935A32C9E8A0" Guid="CE6503F4-7FEE-4D4D-B30F-C32570A78C4E">
+                <File Id="filEE20CD28ADEF1FA639A77F1D966ACDE8" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\milaifontanals_data\[screenName]-c33f0b02841cffc3e9b4.js" />
+            </Component>
+            <Component Id="cmp5B5C718ED85A1F78564150CB1B6DBBD4" Directory="dir7259B1953E933A644543935A32C9E8A0" Guid="5B4A6176-A9FF-4E9B-A0E9-6C3184E291F1">
+                <File Id="filDE768DDD115D1E46F110BFF2C5F11C74" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\milaifontanals_data\_app-b32edc12070b8f808575.js" />
+            </Component>
+            <Component Id="cmpDDA6BA2F37A1294E8834C16662D49835" Directory="dir7259B1953E933A644543935A32C9E8A0" Guid="64FEBAC6-DB50-4EB0-9830-6EF330BE5E03">
+                <File Id="fil5F3690DE5433B7AA4DCAEF4A66957AD9" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\milaifontanals_data\_buildManifest.js" />
+            </Component>
+            <Component Id="cmp93B72DFB3B54D11FA01617C2BDB3B642" Directory="dir7259B1953E933A644543935A32C9E8A0" Guid="D2B909D1-9FB6-4EBB-BF6B-FCF422CFFBA5">
+                <File Id="fil3A73FF1A932A3F82528C1612873D2A5A" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\milaifontanals_data\_ssgManifest.js" />
+            </Component>
+            <Component Id="cmp9209238B6610E38A77C5F1AB0578FDC6" Directory="dir2CDFAB12A6E473ACD0EBB6548B8C184A" Guid="AD8AC54F-098D-41F2-9734-77A08D3B9E0C">
+                <File Id="filA68C3F9D6D3768B74B61D6B83930CC94" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\page_data\-HGPTKcj37t.css" />
+            </Component>
+            <Component Id="cmpDF7FAE7DA5F6D543860D833EC749C2F9" Directory="dir2CDFAB12A6E473ACD0EBB6548B8C184A" Guid="CF4EA847-CFF0-4CC8-BD43-F448BE4B5E28">
+                <File Id="filD40EE759292048C04661FEDD240C4207" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\page_data\14575273816846249594.jpg" />
+            </Component>
+            <Component Id="cmp37DE4E677DF36B00803396CBA6FB6279" Directory="dir2CDFAB12A6E473ACD0EBB6548B8C184A" Guid="7BEFE7AD-2F15-43A4-89BE-FBF4536A5C7A">
+                <File Id="fil2867694395664FAA829AA58B8436F45B" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\page_data\157103479237399754.jpg" />
+            </Component>
+            <Component Id="cmp35DC2A85716B8E99BE851F003C8C16F8" Directory="dir2CDFAB12A6E473ACD0EBB6548B8C184A" Guid="55D820C5-DF87-42BF-A85A-E948C76B38FD">
+                <File Id="fil7C6BCE051B9AB43DF6F96D2958CCC497" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\page_data\190435878_175406017920700_5017321307510074663_n.jpg" />
+            </Component>
+            <Component Id="cmp0383697B8216545B7FF9DBCA0AE3CE4F" Directory="dir2CDFAB12A6E473ACD0EBB6548B8C184A" Guid="8A6B9455-61D1-4909-8CAB-9C6BCCB6EB87">
+                <File Id="filE45A8E34427C1052C8B15A002BEF227E" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\page_data\190435878_175406017920700_5017321307510074663_n_002.jpg" />
+            </Component>
+            <Component Id="cmpFC4B8195E5764B8F6BB404FD3DC79AF0" Directory="dir2CDFAB12A6E473ACD0EBB6548B8C184A" Guid="8C836355-C20F-4DE6-9006-468B329F35AE">
+                <File Id="filF546E8EEC91201337DF0D368D468C01F" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\page_data\190942371_175406014587367_8770988536078656972_n.jpg" />
+            </Component>
+            <Component Id="cmp39D13BAFE635605DB6152108FC909BB5" Directory="dir2CDFAB12A6E473ACD0EBB6548B8C184A" Guid="7DA1A141-5CDE-43B8-857C-51C3519B95BF">
+                <File Id="fil1C29BD854C285DDC8606E5ACC665D63D" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\page_data\330166759_148730468074103_4674840172557237847_n.jpg" />
+            </Component>
+            <Component Id="cmp5D27847C5EEA04FFE68E17D2D686251E" Directory="dir2CDFAB12A6E473ACD0EBB6548B8C184A" Guid="5703636A-0AD5-47C0-AF7B-E13B85F82522">
+                <File Id="fil713A95A03E582A78658F141CC12C2C26" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\page_data\335038300_194706679837114_3896264983932491343_n.jpg" />
+            </Component>
+            <Component Id="cmpC14923361E78F71DA5D67B5307393AD5" Directory="dir2CDFAB12A6E473ACD0EBB6548B8C184A" Guid="1EC6B7B3-6DAC-4B38-8FFD-3E61D14F33AF">
+                <File Id="fil144E0882152BE2DFB4434FAE8B2D9ECE" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\page_data\3Jf5mU8JWa0.js" />
+            </Component>
+            <Component Id="cmp839CADC593D9D651F21458F6722548AB" Directory="dir2CDFAB12A6E473ACD0EBB6548B8C184A" Guid="92145611-7301-40BF-AA63-F2E86ED5CDCA">
+                <File Id="fil72884E50D752F294143C544D65454EF6" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\page_data\484HwSyCscn.js" />
+            </Component>
+            <Component Id="cmp8AEB0038EEFB4B66A4E264D4BA44D68A" Directory="dir2CDFAB12A6E473ACD0EBB6548B8C184A" Guid="08D85417-F2FF-4428-96E7-75ADCF08206F">
+                <File Id="fil2F2769F78E9BEDC4A273CC1BAB8BA208" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\page_data\9831008475364581313.png" />
+            </Component>
+            <Component Id="cmpCB53CCD31F5F32916D955431B39E7951" Directory="dir2CDFAB12A6E473ACD0EBB6548B8C184A" Guid="CB58926B-F919-4C00-BC2B-8CE024647553">
+                <File Id="fil90BA1A757C2D8C65789885EA8E072D07" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\page_data\Ci0308vyT_v.css" />
+            </Component>
+            <Component Id="cmp9C63BF3FD66035947690B1B1E5049769" Directory="dir2CDFAB12A6E473ACD0EBB6548B8C184A" Guid="A4CF0E0F-63B9-45E3-8167-061140C3C15E">
+                <File Id="fil61778B607A18A3F9D7A27DCF776B2CB9" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\page_data\GG1Y0sYc7My.js" />
+            </Component>
+            <Component Id="cmp188D4887BEE4E27C3087821C86ACCB1F" Directory="dir2CDFAB12A6E473ACD0EBB6548B8C184A" Guid="3C332D82-FFAA-4916-8232-8BA8CFA10263">
+                <File Id="fil39DF8E20985B179EAF5B967FCA159CFB" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\page_data\GiLv5tPvrTm.css" />
+            </Component>
+            <Component Id="cmp464A46124991313DB609AEBC1100A2F1" Directory="dir2CDFAB12A6E473ACD0EBB6548B8C184A" Guid="A2F53E26-408F-4BB2-844A-FD4FE43FCF92">
+                <File Id="fil5B6D22346115A4BD7E69E9EF66014C23" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\page_data\ie38mp0O07P.js" />
+            </Component>
+            <Component Id="cmp84D83BE2D229018250968A8EBDA7F8D3" Directory="dir2CDFAB12A6E473ACD0EBB6548B8C184A" Guid="5823D65E-E97A-431B-904E-6C42F927033A">
+                <File Id="fil94F04E2BF48B2F60ED69E8E21699B815" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\page_data\inckhvn2ySB.css" />
+            </Component>
+            <Component Id="cmp1D6827DB016F967C3C93D57C96E6A9E8" Directory="dir2CDFAB12A6E473ACD0EBB6548B8C184A" Guid="0DF4C97D-C098-4E5F-A1B0-9C3114639617">
+                <File Id="fil1E5791D254DA3A976E5CB709A8B1555B" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\page_data\kbzs36JuVCK.js" />
+            </Component>
+            <Component Id="cmpF856A1B3B790404E186C6EC9DBDEC051" Directory="dir2CDFAB12A6E473ACD0EBB6548B8C184A" Guid="14708212-AC98-41A7-90B3-9A666D529C52">
+                <File Id="fil5A08CF51883DB14A5365DE7B94EEA1AD" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\page_data\n2jf6z9AZxW.js" />
+            </Component>
+            <Component Id="cmp709FEF22C62C620D0D8E35E8EF07624C" Directory="dir2CDFAB12A6E473ACD0EBB6548B8C184A" Guid="029E6405-763C-4750-A857-DA8A0A10C8EB">
+                <File Id="filE41B5651E38CF2AEDE52D051CEF02F5A" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\page_data\og_iMI4wp_T.js" />
+            </Component>
+            <Component Id="cmpC5F9B5D589C62940E95FF7D4CBFF8137" Directory="dir2CDFAB12A6E473ACD0EBB6548B8C184A" Guid="214786BA-4FB8-460B-9745-87FFA97244AA">
+                <File Id="filD810E000365C5F7A905594A1D7A77F96" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\page_data\p55HfXW__mM.js" />
+            </Component>
+            <Component Id="cmpB7DF1A65D44610502806D848DA23A093" Directory="dir2CDFAB12A6E473ACD0EBB6548B8C184A" Guid="217497A1-3EC8-4EA9-A6F8-DA714E32EBBF">
+                <File Id="filA14153B2332C5A76A7E72A8151885F9A" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\page_data\PEDyOhkojVd.js" />
+            </Component>
+            <Component Id="cmp0EF49F4AF1F81C3411223CC298ABB637" Directory="dir2CDFAB12A6E473ACD0EBB6548B8C184A" Guid="7B871550-F7C3-4279-9BD2-930C6FE22C15">
+                <File Id="filBFA67621DB8160F0FEC478C3D7030C42" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\page_data\RnWAhA1nLjg.js" />
+            </Component>
+            <Component Id="cmpD11F03C69EF7B41C0AEF72DF3C1B02E3" Directory="dir2CDFAB12A6E473ACD0EBB6548B8C184A" Guid="7E888892-E365-4EC2-A10E-D477AF1F1E1D">
+                <File Id="fil18E3CCD4FB99703801C7F241BB3C974E" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\page_data\SV0HgmB8RsT.js" />
+            </Component>
+            <Component Id="cmp718D092B93707FB853C8043A06D477B1" Directory="dir2CDFAB12A6E473ACD0EBB6548B8C184A" Guid="B890468D-69AC-4997-979D-901B9D36B11F">
+                <File Id="fil4F838A4EAD9EDB5AA133F5B40273B75B" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\page_data\uONgRzMCvWU.js" />
+            </Component>
+            <Component Id="cmpE986B19D0BFC709CD9DF5401AEB393E3" Directory="dir2CDFAB12A6E473ACD0EBB6548B8C184A" Guid="1D767205-47FD-46FD-A672-0FD407E06DD3">
+                <File Id="fil01C15FF6F695FD4F28BCD721B1CEA863" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\page_data\V8jK12UmQ6C.js" />
+            </Component>
+            <Component Id="cmp62E305B8978BE95A3C8F38141B39B276" Directory="dir2CDFAB12A6E473ACD0EBB6548B8C184A" Guid="CDE816BF-461A-48C9-B544-9D6F3CE777C7">
+                <File Id="fil30AEF0464987645784B870BC1D7D56FD" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\page_data\W3PxU4hdAb1.js" />
+            </Component>
+            <Component Id="cmp25C0F4CA6DAF745698B25AA0C04C5212" Directory="dir2CDFAB12A6E473ACD0EBB6548B8C184A" Guid="79D0F6A7-D87A-43A3-82EF-4336DC37A071">
+                <File Id="filD847B8A8853C1B8E7CEEB02661C0BF8A" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\page_data\Wtl6tMxz2hH.js" />
+            </Component>
+            <Component Id="cmp5D7711205C221EF4004B1F8C66EB5CF3" Directory="dir2CDFAB12A6E473ACD0EBB6548B8C184A" Guid="AA664FDC-E4BF-4D8C-84FC-4CA43E440C2D">
+                <File Id="filCDC93ECF35F09CD6226DD6F09168DA88" KeyPath="yes" Source="$(var.PathDocumentacio)\index_fitxers\page_data\zTAcZgbV8nB.js" />
+            </Component>
+        </ComponentGroup>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="dir099EE867361442AB6476EA9C228D3C83">
+            <Directory Id="dir242D6ABC9EE1C5A11152EE3E43D7A39A" Name="62cd937b61c1e300175a3edc_data" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="dir099EE867361442AB6476EA9C228D3C83">
+            <Directory Id="dir2CDFAB12A6E473ACD0EBB6548B8C184A" Name="page_data" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="dir099EE867361442AB6476EA9C228D3C83">
+            <Directory Id="dir7259B1953E933A644543935A32C9E8A0" Name="milaifontanals_data" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="dir099EE867361442AB6476EA9C228D3C83">
+            <Directory Id="dir72AF5D9F596921C64700F8C263B19E52" Name="64075be14b8e5b0013354d02_data" />
+        </DirectoryRef>
+    </Fragment>
+</Wix>
